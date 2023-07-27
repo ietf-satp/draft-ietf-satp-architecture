@@ -218,7 +218,7 @@ This document proposes an interoperability architecture for
       systems based on the gateway model.
 
 --- middle
-   
+
 # Introduction
 {: #introduction}
  This document proposes an interoperability architecture based on gateways,
@@ -389,7 +389,7 @@ are assumed to be signed and verified (e.g. X.509).
  * Transitory ownership of asset by gateway:
 Assets being transferred via SAT will be technically be owned
 by gateway in transit and gateways are liable for
-them while they have ownership. 
+them while they have ownership.
 
 * Network data: Gateways are assumed to have mechanisms in place to trust data
 returned from their local networks.
@@ -451,7 +451,7 @@ in these networks maybe incompatible with one another.
 The architecture therefore assumes that in addition
 to implementing the bilateral secure asset transfer protocol,
 a gateway has the role of making opaque (i.e. hiding)
-the constructs that are local and specific to its network. 
+the constructs that are local and specific to its network.
 
 
 Overall this approach ensures a high degree of interoperability across these networks,
@@ -479,11 +479,11 @@ The two gateways implement the protocol in a direct interaction (unmediated).
 
 A successful transfer results in the asset being extinguished (burned)
 or marked on the origin network, and for the asset to be regenerated (minted)
-at the destination network. 
+at the destination network.
 
 The secure asset transfer protocol provides a coordination
 between the two gateways through the various message flows
-in the protocol that is communicated over a secure channel. 
+in the protocol that is communicated over a secure channel.
 
 The protocol implements a commitment mechanism between the
 two gateways to ensure that the relevant properties
@@ -581,7 +581,7 @@ an interior resource accessible to other authorized gateways within the same net
 The mechanism used to provide gateway crash-recovery is dependent
 on the specific network.
 For interoperability purposes the information contained in the log and
-the format of the log-data should be standardized. 
+the format of the log-data should be standardized.
 
 The resumption of an interrupted transfer session (e.g. due to gateway crash, network failure, etc.)
 should take into consideration the aspects of secure channel establishment
@@ -592,7 +592,7 @@ established between the two gateways, before a resumption of the transfer can be
 The log-data collected by a gateway acts also as
 a checkpoint mechanism to assist the recovered (or backup) gateway in continuing the transfer.
 The point at which to re-start the transfer protocol flow
-is dependent on the implementation of the gateway recovery strategy. 
+is dependent on the implementation of the gateway recovery strategy.
 
 
 ## Overview of the Stages in Asset Transfer
@@ -609,8 +609,8 @@ he gateways are denoted as G1 and G2 respectively.
       |   Client    |                               |   Client    |
       | Application |                               | Application |
       |    (App1)   |                               |    (App2)   |
-      +-------------+                               +-------------+ 
-             |                                             | 
+      +-------------+                               +-------------+
+             |                                             |
              |                  (Stages)                   |
              V                                             V
       +-------------+       |<-----(1)----->|       +-------------+
@@ -618,7 +618,7 @@ he gateways are denoted as G1 and G2 respectively.
       |     NW1     |  |Gate|               |Gate|  |     NW2     |
       |             |--|way |<-----(2)----->|way |--|             |
       | +---------+ |  | G1 |               | G2 |  | +---------+ |
-      | |  State  | |  +----+               +----+  | |   State | |     
+      | |  State  | |  +----+               +----+  | |   State | |
       | | Data DB1| |  +----+               +----+  | | Data DB2| |
       | +---------+ |       |<-----(3)----->|       | +---------+ |
       +-------------+                               +-------------+
@@ -639,7 +639,7 @@ The legal verification of the identities of the Originator and
 Beneficiary may occur in this stages [FATF].
 This stage is outside the scope of the current architecture.
 
-* Stage 1: Transfer Initiation Claims negotiations. 
+* Stage 1: Transfer Initiation Claims negotiations.
 In this stage gateways G1 and G2 must exchange information (claims)
 regarding the asset to be transferred, the identity information of
 the Originator and Beneficiary and other information
@@ -718,13 +718,13 @@ where the beneficiary is located, and that gateway G2 in
 network NW2 has been identified.
 
 The first message (Transfer Proposal Claims) maybe multi-round in
-the sense there is a negotiation of the claims between G1 and G2. 
+the sense there is a negotiation of the claims between G1 and G2.
 Once G2 accepts the agreed claims,
 G2 must send a signed receipt carrying the hash of the claims agreed.
 
 
 There are several steps that may occur in Stage 1:
-         
+
 * Secure channel establishment between G1 and G2:
 This includes the mutual verification of the gateway device identities
 and the exchange of the relevant parameters for secure channel establishment.
@@ -815,7 +815,7 @@ The mechanism to lock or immobilize the asset is outside the scope of SATP.
 
 
 * G2 Logs and Broadcasts lock-assertion information (2.3): Gateway G2 logs a copy of the signed
-      lock-assertion message received in Step 2.4 to its local state data DB2. 
+      lock-assertion message received in Step 2.4 to its local state data DB2.
       G2 may also broadcast the fasts of the lock-assertion to all members of network NW2.
       The mechanism to log and to broadcast is out of scope for SATP.
 
@@ -868,7 +868,6 @@ embedded within the overall SATP asset transfer protocol.
 Upon receiving the signed receipt message from G2 in the previous stage,
 G1 begins the commitment (see Figure 5):
 
-         
 * Commit-prepare (3.1):
 Gateway G1 indicates to G2 to prepare for the commitment of the transfer.
 This message must include a hash of the previous messages (message 2.5 and 2.6).
@@ -877,7 +876,7 @@ This message must include a hash of the previous messages (message 2.5 and 2.6).
 an equivalent asset in NW2 assigned to itself as the owner.
 This step can be reversed (i.e. asset destroyed)
 in the case of the failure in the commitment steps
-because G2 is still the owner of the asset in NW2. 
+because G2 is still the owner of the asset in NW2.
 
 * Commit-ready (3.3): Gateway G2 sends a commit-ready message
 to G1 indicating that it is ready to carry-out the last steps of
@@ -899,7 +898,7 @@ in network NW1 which it has locked since Step 2.3.
 that it has assigned the asset to the intended Beneficiary.
 
 * Receipt broadcast (3.8) Gateway G1 logs a copy of the
-signed receipt message to its local state data DB2. 
+signed receipt message to its local state data DB2.
 G1 may also broadcast the fasts of the signed receipt
 to all members of network NW1.
 The mechanism to log and to broadcast is out of scope for SATP.
