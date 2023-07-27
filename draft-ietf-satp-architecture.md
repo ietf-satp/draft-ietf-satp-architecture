@@ -17,7 +17,7 @@ pi:
 
 title: Secure Asset Transfer (SAT) Interoperability Architecture
 abbrev: SAT Architecture
-docname: draft-ietf-satp-architecture
+docname: draft-ietf-satp-architecture-latest
 category: info
 
 ipr: trust200902
