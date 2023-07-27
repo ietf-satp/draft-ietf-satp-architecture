@@ -21,20 +21,20 @@ docname: draft-ietf-satp-architecture-latest
 category: info
 
 ipr: trust200902
-area: General
-workgroup: SATP Working Group
+area: "Applications and Real-Time"
+workgroup: "Secure Asset Transfer Protocol"
 
 stream: IETF
 keyword: Internet-Draft
 consensus: true
 
 venue:
-  group: SATP
-  type: Working Group
-  mail: sat@ietf.org
-  arch: https://mailarchive.ietf.org/arch/browse/sat/
-  github: ietf-satp/draft-ietf-satp-architecture
-  latest: https://datatracker.ietf.org/doc/draft-ietf-satp-architecture/
+  group: "Secure Asset Transfer Protocol"
+  type: "Working Group"
+  mail: "sat@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/sat/"
+  github: "ietf-satp/draft-ietf-satp-architecture"
+  latest: "https://ietf-satp.github.io/draft-ietf-satp-architecture/draft-ietf-satp-architecture.html"
 
 author:
  -
