@@ -243,8 +243,8 @@ a gateway that supports the secure asset transfer protocol.
 {: #terms}
 
 There following are some terminology used in the current document.
-      We borrow terminology from NIST and ISO as much as possible,
-      introducing new terms only when needed:
+We borrow terminology from NIST and ISO as much as possible,
+introducing new terms only when needed:
 
 
 * Asset network (system): The network or system where a digital asset is utilized.
