@@ -613,7 +613,7 @@ is dependent on the implementation of the gateway recovery strategy.
 ## Overview of the Stages in Asset Transfer
 {: #phasetransfer}
 
-The interaction between two gateways in the secure asset transfer protocol is summarized in 
+The interaction between two gateways in the secure asset transfer protocol is summarized in
 {{gateway-stages}},
 where the origin network is NW1 and the destination network is NW2.
 The gateways are denoted as G1 and G2 respectively.
