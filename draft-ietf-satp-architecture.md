@@ -247,55 +247,70 @@ We borrow terminology from NIST and ISO as much as possible,
 introducing new terms only when needed:
 
 
-* Asset network (system): The network or system where a digital asset is utilized.
+Asset network (system)
+: The network or system where a digital asset is utilized.
 
-* Asset Transfer Protocol: The protocol used to transfer (move)
+Asset Transfer Protocol
+: The protocol used to transfer (move)
 a digital asset from one network to another using gateways.
 
-* Origin network: The current network where the digital asset is located.
+Origin network
+: The current network where the digital asset is located.
 
-* Destination network: The network to which a digital asset is to be transferred.
+Destination network
+: The network to which a digital asset is to be transferred.
 
-* Resource Domain: The collection of resources and entities
+Resource Domain
+: The collection of resources and entities
 participating within an asset network.
 The domain denotes a boundary for permissible or authorized actions on resources.
 
-* Interior Resources: The various interior protocols,
+Interior Resources
+: The various interior protocols,
 data structures and cryptographic constructs that
 are a core part of an asset network or system.
 
-* Exterior Resources: The various protocols,
+Exterior Resources
+: The various protocols,
 data structures and cryptographic constructs
 that are outside of (external to) the network or system.
 
-* Gateway: The collection of services which connects
+Gateway
+: The collection of services which connects
 to a minimum of one network or system,
 and which implements the secure asset transfer protocol.
 
-* Entity public-key pair: This the private-public key pairs of an entity,
-where the public-key is available and verifiable outside the network.
+Entity public key pair
+: This the private-public key pairs of an entity,
+where the public key is available and verifiable outside the network.
 Among others, it may be utilized for interactions other entities
 from outside the network.
-The term is used to distinguish this public-key from other key-pairs
+The term is used to distinguish this publickey from other key-pairs
 belonging to the same entity, but which is only available within the (private) network.
 
-* Originator: Person or organization in an origin network seeking
+Originator
+: Person or organization in an origin network seeking
 the transfer of a digital asset to a beneficiary located in a remote network.
 
-* Beneficiary: Person or organization in an destination network seeking
+Beneficiary
+: Person or organization in an destination network seeking
 to receive the transfer of a digital asset to from an originator located in a remote network.
 
-* Gateway device identity: The identity of the device implementing the gateway functions.
+Gateway device identity
+: The identity of the device implementing the gateway functions.
 The term is used in the sense of IDevID (IEEE 802.1AR) or EK/AIK (in TPM1.2 and TPM2.0) [IDevID].
 
-* Gateway owner: The entity that owns and operates a gateway within a network.
+Gateway owner
+: The entity that owns and operates a gateway within a network.
 
-* Application Context-ID: The relevant identifier used by originator's application and
+Application Context-ID
+: The relevant identifier used by originator's application and
 the beneficiary's application to identify the context of the asset transfer at the gateway level.
 The context identifier may also be used to bind the application to
 selected gateway for the given transfer instance, identified by a Session-ID.
 
-* Gateway Session-ID: This the identifier used between the sender gateway and
+Gateway Session-ID
+: This the identifier used between the sender gateway and
 the recipient gateway to identify the specific transfer instance.
 The Session-ID must be included in all messages between the gateways.
 
@@ -397,7 +412,7 @@ This will depend on the technical architecture and capabilities
 of each specific network.
 
  * Gateways are trusted: The gateways are assumed to be trusted
-to carry-out all the stages of the protocol described in this architecture.
+to carry out all the stages of the protocol described in this architecture.
 
 
 # Gateway Interoperability Modes
@@ -434,7 +449,7 @@ The remainder of this architecture document will focus on the asset transfer flo
 {: #goalarchitecture}
 
 The goal of the interoperability architecture is to permit two (2) gateways
-belonging to distinct networks to conduct a transfer of digital assets transfer between them,
+belonging to distinct networks to conduct a transfer of digital assets between them,
 in a secure, atomic and verifiable manner.
 
 
@@ -445,7 +460,7 @@ to the gateway syntactically and semantically.
 
 The architecture recognizes that there are different networks currently
 in operation and evolving, and that in many cases the interior technical constructs
-in these networks maybe incompatible with one another.
+in these networks may be incompatible with one another.
 
 
 The architecture therefore assumes that in addition
@@ -478,7 +493,7 @@ the gateways in the respective networks.
 The two gateways implement the protocol in a direct interaction (unmediated).
 
 A successful transfer results in the asset being extinguished (burned)
-or marked on the origin network, and for the asset to be regenerated (minted)
+or marked as invalid on the origin network, and for the asset to be regenerated (minted)
 at the destination network.
 
 The secure asset transfer protocol provides a coordination
@@ -486,7 +501,7 @@ between the two gateways through the various message flows
 in the protocol that is communicated over a secure channel.
 
 The protocol implements a commitment mechanism between the
-two gateways to ensure that the relevant properties
+two gateways to ensure that the relevant properties:
 atomicity, consistency, isolation, and durability are achieved in the transfer.
 
 The mechanism to extinguish (burn) or regenerate (mint) an asset from/into
@@ -509,8 +524,8 @@ asset transfer that is verifiable by an authorized third party.
 
 ## Desirable Properties of Asset Transfer
 {: #properties}
-The desirable features of asset transfers
-between two gateway  include, but not limited,
+The desirable features of asset transfer
+between two gateways  include, but are not limited,
 to the following:
 
 * Atomicity: A transfer must either commit or entirely fail (failure means no change to asset state).
@@ -598,9 +613,10 @@ is dependent on the implementation of the gateway recovery strategy.
 ## Overview of the Stages in Asset Transfer
 {: #phasetransfer}
 
-The interaction between two gateways in the secure asset transfer protocol is summarized in Figure 1,
-where the origin network is NW1 and the destination network is NW2. T
-he gateways are denoted as G1 and G2 respectively.
+The interaction between two gateways in the secure asset transfer protocol is summarized in 
+{{gateway-stages}},
+where the origin network is NW1 and the destination network is NW2.
+The gateways are denoted as G1 and G2 respectively.
 
 ~~~
          Originator                                   Beneficiary
@@ -623,14 +639,13 @@ he gateways are denoted as G1 and G2 respectively.
       | +---------+ |       |<-----(3)----->|       | +---------+ |
       +-------------+                               +-------------+
 ~~~
-
-{: #gateway-stages}
+{: #gateway-stages title="The SAT Protocol's Stages"}
 
 The stages are summarized as follows.
 
 * Stage 0: Pre-transfer Verification and Context Establishment.
 The two applications utilized by the originator and beneficiary
-is assumed to interact as part of the asset transfer.
+are assumed to interact as part of the asset transfer.
 In this stage, the applications App1 and App2 may establish
 some shared transfer context information (e.g.  Context-ID) at the application level
 that will be made
@@ -645,16 +660,16 @@ regarding the asset to be transferred, the identity information of
 the Originator and Beneficiary and other information
 regarding relevant actors (e.g. gateway owner/operator).
 
-Additionally, the gateways must exchange information regarding
+   Additionally, the gateways must exchange information regarding
 the gateway and network characteristics that are unique
 to G1, G2, NW1 and NW2 for this particular transfer instance.
 
 
 * Stage 2: Lock Assertion and Receipt.  In this stage, gateway G1
 must provide gateway G2 with a signed assertion that
-the asset in NW1 has been immobilized and under the control on G1.
+the asset in NW1 has been immobilized and is under the control of G1.
 A signed assertion is needed because NW1 may be a private or closed network,
-and therefore the state-database (ledger) in NW1 is no readable by external entities including by G2.
+and therefore the state database (ledger) in NW1 is not readable by external entities including by G2.
 Gateway G1 must therefore make this signed assertion explicitly.
 Note that the owner/operator of G1 takes on liability in signing this assertion.
 
@@ -666,7 +681,7 @@ using a 3PC (3-phase commit) subprotocol.
 These transfer stages will be further discussed below.
 
 
-# Transfer Initiation Claims negotiations (Stage-1)
+# Transfer Initiation Claims negotiations (Stage 1)
 {: #phase-one}
 
 The purpose of this stage is for the sender gateway (G1) and
@@ -678,7 +693,7 @@ and exchange gateway-specific and network-specific parameters.
 
 These artifacts are contained in the Transfer Initiation Claims set
 that is sent from gateway G1 to G2. The set of claims may be
-negotiated between GH1 and G2 in multi-round set of messages.
+negotiated between G1 and G2 in a multi-round set of messages.
 
 
 
@@ -708,8 +723,7 @@ negotiated between GH1 and G2 in multi-round set of messages.
        |     |            |                      |            |     |
 
 ~~~
-{: #phaseone-figure}
-
+{: #phaseone-figure title="Stage 1 Messages"}
 
 This stage starts with the assumption that in network NW1 the gateway
 who processes the asset transfer has been selected (namely gateway G1).
@@ -717,7 +731,7 @@ It also assumes that the destination network NW2 has been identified
 where the beneficiary is located, and that gateway G2 in
 network NW2 has been identified.
 
-The first message (Transfer Proposal Claims) maybe multi-round in
+The first message (Transfer Proposal Claims) may be multi-round in
 the sense there is a negotiation of the claims between G1 and G2.
 Once G2 accepts the agreed claims,
 G2 must send a signed receipt carrying the hash of the claims agreed.
@@ -763,11 +777,11 @@ must be enforced by G2.
 
 * Exchange of Travel Rule information and validation:
 In jurisdictions where the Travel Rule policies
-regarding originator and beneficiary information is enforced [FATF],
+regarding originator and beneficiary information are enforced [FATF],
 the owners of gateways G1 and G2 must comply to the Travel Rule.
 Mechanisms must be used to permit gateways G1 and G2
 to make available originator/beneficiary information
-to one another in such a away that the Travel Rule information
+to one another in such a way that the Travel Rule information
 can be logged as part of the asset transfer history.
 
 * Negotiation of asset transfer protocol parameters:
@@ -797,7 +811,7 @@ In this stage, gateway G1 must issue a signed assertion that
 the asset in origin network NW1 has been immobilized and under the control of G1.
 
 
-The steps of Stage 2 are summarized in Figure 4, and broadly consists of the following:
+The steps of Stage 2 are summarized in {{phasetwo-figure}}, and broadly consists of the following:
 
 * G1 lock/escrow asset (2.1): Gateway G1 proceeds to establish
 a lock or escrow the asset belonging to the originator.
@@ -816,7 +830,7 @@ The mechanism to lock or immobilize the asset is outside the scope of SATP.
 
 * G2 Logs and Broadcasts lock-assertion information (2.3): Gateway G2 logs a copy of the signed
       lock-assertion message received in Step 2.4 to its local state data DB2.
-      G2 may also broadcast the fasts of the lock-assertion to all members of network NW2.
+      G2 may also broadcast an update regarding the lock-assertion to all members of network NW2.
       The mechanism to log and to broadcast is out of scope for SATP.
 
 
@@ -847,7 +861,7 @@ the transfer and let the session time-out (i.e. transfer attempt has failed).
       ..|.....|............|....................|..............|.....|..
         |     |            |                    |              |     |
 ~~~
-{: #phasetwo-figure}
+{: #phasetwo-figure title="Stage 2 Messages"}
 
 
 The purpose of the signed lock-assertion is for dispute resolution between G1 and G2
@@ -861,12 +875,12 @@ cover G1 (exculpatory proof) in the case of later denial by G2.
 # Commitment Preparation and Finalization (Stage 3)
 {: #phase-three}
 
-In Stage 3 the gateways G1 and G2 finalizes to the asset transfer
+In Stage 3 the gateways G1 and G2 finalize the asset transfer
 by performing a commitment protocol (e.g. 2PC or 3PC) as a process (sub-protocol)
 embedded within the overall SATP asset transfer protocol.
 
 Upon receiving the signed receipt message from G2 in the previous stage,
-G1 begins the commitment (see Figure 5):
+G1 begins the commitment (see {{phasethree-figure}}):
 
 * Commit-prepare (3.1):
 Gateway G1 indicates to G2 to prepare for the commitment of the transfer.
@@ -879,7 +893,7 @@ in the case of the failure in the commitment steps
 because G2 is still the owner of the asset in NW2.
 
 * Commit-ready (3.3): Gateway G2 sends a commit-ready message
-to G1 indicating that it is ready to carry-out the last steps of
+to G1 indicating that it is ready to carry out the last steps of
 the commitment subprotocol.
 Note that that the entire asset transfer session can be aborted
 before this step without affecting the asset state in the respective networks.
@@ -899,7 +913,7 @@ that it has assigned the asset to the intended Beneficiary.
 
 * Receipt broadcast (3.8) Gateway G1 logs a copy of the
 signed receipt message to its local state data DB2.
-G1 may also broadcast the fasts of the signed receipt
+G1 may also broadcast an update regarding the signed receipt
 to all members of network NW1.
 The mechanism to log and to broadcast is out of scope for SATP.
 
@@ -939,7 +953,7 @@ The mechanism to log and to broadcast is out of scope for SATP.
         |     |             |                    |            |     |
 
 ~~~
-{: #phasethree-figure}
+{: #phasethree-figure title="Stage 3 Messages"}
 
 
 # The Commitment Sub-Protocol
