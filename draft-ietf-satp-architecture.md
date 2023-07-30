@@ -359,7 +359,7 @@ leading to the invocation of the asset transfer protocol between two gateways:
       by the respective applications (App1 and App2).
       Furthermore, this context-identifier is assumed to have been delivered
       by the each application to its corresponding gateway,
-      permiting each gateway to internally bind the
+      permitting each gateway to internally bind the
       transfer session-identifier to that context-identifier.
 
  * Identification of asset to be transferred: The applications at
@@ -519,7 +519,7 @@ which states that the asset has been regenerated (minted) in the destination net
 
 These two tasks must be performed in a synchronized fashion
 between the two gateways,
-and the commitment mechanism must provide sufficent evidence of the
+and the commitment mechanism must provide sufficient evidence of the
 asset transfer that is verifiable by an authorized third party.
 
 ## Desirable Properties of Asset Transfer
