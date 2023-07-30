@@ -1,0 +1,107 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-07-30T00:46:42.636343+00:00",
+  "repo": "ietf-satp/draft-ietf-satp-architecture",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOKAjJUs5WrjgP",
+      "title": "Editorial changes",
+      "url": "https://github.com/ietf-satp/draft-ietf-satp-architecture/pull/1",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-07-28T18:33:41Z",
+      "updatedAt": "2023-07-28T18:34:00Z",
+      "baseRepository": "ietf-satp/draft-ietf-satp-architecture",
+      "baseRefName": "main",
+      "baseRefOid": "e46d714f81b8c39f3a0d32bf6b62b7fa8fcd77f2",
+      "headRepository": "ietf-satp/draft-ietf-satp-architecture",
+      "headRefName": "editorials1",
+      "headRefOid": "719259d9bd445cbe5b7d84762cd3bf3d45cdb81b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOKAjJUs5Wt4Tr",
+      "title": "2nd round of editorial changes",
+      "url": "https://github.com/ietf-satp/draft-ietf-satp-architecture/pull/2",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-07-29T19:06:47Z",
+      "updatedAt": "2023-07-29T19:08:34Z",
+      "baseRepository": "ietf-satp/draft-ietf-satp-architecture",
+      "baseRefName": "main",
+      "baseRefOid": "e46d714f81b8c39f3a0d32bf6b62b7fa8fcd77f2",
+      "headRepository": "ietf-satp/draft-ietf-satp-architecture",
+      "headRefName": "editorials2",
+      "headRefOid": "65e86b875bb15a46db22cbfe3d740fd0a42a30be",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
