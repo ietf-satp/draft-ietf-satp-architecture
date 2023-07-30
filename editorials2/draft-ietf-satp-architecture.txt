@@ -5,12 +5,12 @@
 Secure Asset Transfer Protocol                               T. Hardjono
 Internet-Draft                                                       MIT
 Intended status: Informational                             M. Hargreaves
-Expires: 30 January 2024                                   Quant Network
+Expires: 31 January 2024                                   Quant Network
                                                                 N. Smith
                                                                    Intel
                                                           V. Ramakrishna
                                                                      IBM
-                                                            29 July 2023
+                                                            30 July 2023
 
 
        Secure Asset Transfer (SAT) Interoperability Architecture
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 January 2024.
+   This Internet-Draft will expire on 31 January 2024.
 
 Copyright Notice
 
@@ -234,7 +234,7 @@ Table of Contents
       identifier has subsequently been derived by the respective
       applications (App1 and App2).  Furthermore, this context-
       identifier is assumed to have been delivered by the each
-      application to its corresponding gateway, permiting each gateway
+      application to its corresponding gateway, permitting each gateway
       to internally bind the transfer session-identifier to that
       context-identifier.
 
@@ -385,9 +385,9 @@ Table of Contents
    the destination network.
 
    These two tasks must be performed in a synchronized fashion between
-   the two gateways, and the commitment mechanism must provide sufficent
-   evidence of the asset transfer that is verifiable by an authorized
-   third party.
+   the two gateways, and the commitment mechanism must provide
+   sufficient evidence of the asset transfer that is verifiable by an
+   authorized third party.
 
 5.3.  Desirable Properties of Asset Transfer
 
