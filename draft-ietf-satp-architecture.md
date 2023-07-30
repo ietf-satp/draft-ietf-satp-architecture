@@ -230,19 +230,19 @@ to another via pairs of gateways without a mediating third party.
 
 A given network or system may have one or more gateways to perform
 a unidirectional direct transfer of digital assets to
-another network possessing one or more compatible gateway.
+another network possessing one or more compatible gateways.
 
 Both gateways must implement a secure asset transfer protocol
 that must satisfy certain security, privacy and atomicity requirements.
 
-The purpose of this architecture document is to provide technical framework
+The purpose of this architecture document is to provide a technical framework
 within which to define the required properties of
 a gateway that supports the secure asset transfer protocol.
 
 # Terminology
 {: #terms}
 
-There following are some terminology used in the current document.
+Following is some terminology used in the current document.
 We borrow terminology from NIST and ISO as much as possible,
 introducing new terms only when needed:
 
@@ -274,7 +274,7 @@ and which implements the secure asset transfer protocol.
 
 * Entity public-key pair: This the private-public key pairs of an entity,
 where the public-key is available and verifiable outside the network.
-Among others, it may be utilized for interactions other entities
+Among others, it may be utilized for interactions withother entities
 from outside the network.
 The term is used to distinguish this public-key from other key-pairs
 belonging to the same entity, but which is only available within the (private) network.
@@ -283,7 +283,7 @@ belonging to the same entity, but which is only available within the (private) n
 the transfer of a digital asset to a beneficiary located in a remote network.
 
 * Beneficiary: Person or organization in an destination network seeking
-to receive the transfer of a digital asset to from an originator located in a remote network.
+to receive the transfer of a digital asset from an originator located in a remote network.
 
 * Gateway device identity: The identity of the device implementing the gateway functions.
 The term is used in the sense of IDevID (IEEE 802.1AR) or EK/AIK (in TPM1.2 and TPM2.0) [IDevID].
@@ -293,9 +293,9 @@ The term is used in the sense of IDevID (IEEE 802.1AR) or EK/AIK (in TPM1.2 and 
 * Application Context-ID: The relevant identifier used by originator's application and
 the beneficiary's application to identify the context of the asset transfer at the gateway level.
 The context identifier may also be used to bind the application to
-selected gateway for the given transfer instance, identified by a Session-ID.
+the selected gateway for the given transfer instance, identified by a Session-ID.
 
-* Gateway Session-ID: This the identifier used between the sender gateway and
+* Gateway Session-ID: This is the identifier used between the sender gateway and
 the recipient gateway to identify the specific transfer instance.
 The Session-ID must be included in all messages between the gateways.
 
@@ -313,7 +313,7 @@ The following assumptions and principles underlie the design of the
 {: #designprinciples}
 
 * Opaque network resources:
-The interior resources of each network is assumed
+The interior resources of each network are assumed
 to be opaque to (hidden from) external entities.
 Any resources to be made accessible to an external entity
 must be made explicitly accessible by a gateway with proper authorization.
@@ -357,10 +357,10 @@ identified and that consent has been obtained from
 both parties regarding the asset transfer.
 
  * Identification of origin and destination asset networks:
-The origin and destination networks is assumed to have been identified.
+The origin and destination networks are assumed to have been identified.
 
  * Selection of gateway: The two corresponding gateways
-at the origin and destination networks is assumed to have been identified and selected.
+at the origin and destination networks are assumed to have been identified and selected.
 
 
 ## Assumptions Regarding Gateway Operators
@@ -387,7 +387,7 @@ where the gateways are operating.
 are assumed to be signed and verified (e.g. X.509).
 
  * Transitory ownership of asset by gateway:
-Assets being transferred via SAT will be technically be owned
+Assets being transferred via SAT will technically be owned
 by gateway in transit and gateways are liable for
 them while they have ownership.
 
