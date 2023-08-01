@@ -5,12 +5,12 @@
 Secure Asset Transfer Protocol                               T. Hardjono
 Internet-Draft                                                       MIT
 Intended status: Informational                             M. Hargreaves
-Expires: 31 January 2024                                   Quant Network
+Expires: 2 February 2024                                   Quant Network
                                                                 N. Smith
                                                                    Intel
                                                           V. Ramakrishna
                                                                      IBM
-                                                            30 July 2023
+                                                           1 August 2023
 
 
        Secure Asset Transfer (SAT) Interoperability Architecture
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 January 2024.
+   This Internet-Draft will expire on 2 February 2024.
 
 Copyright Notice
 
@@ -156,7 +156,7 @@ Table of Contents
       entity, where the public key is available and verifiable outside
       the network.  Among others, it may be utilized for interactions
       other entities from outside the network.  The term is used to
-      distinguish this publickey from other key-pairs belonging to the
+      distinguish this public key from other key-pairs belonging to the
       same entity, but which is only available within the (private)
       network.
 
