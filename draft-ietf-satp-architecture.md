@@ -285,7 +285,7 @@ Entity public key pair
 where the public key is available and verifiable outside the network.
 Among others, it may be utilized for interactions other entities
 from outside the network.
-The term is used to distinguish this publickey from other key-pairs
+The term is used to distinguish this public key from other key-pairs
 belonging to the same entity, but which is only available within the (private) network.
 
 Originator
