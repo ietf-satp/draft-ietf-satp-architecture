@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-08-01T00:50:20.236598+00:00",
+  "timestamp": "2023-08-03T00:44:50.007647+00:00",
   "repo": "ietf-satp/draft-ietf-satp-architecture",
   "labels": [
     {
@@ -62,9 +62,24 @@
       "labels": [],
       "body": "Since this is the core document of the working group, I think the Intro should start with a much simpler paragraph saying what this is all about. Here's a shot at it:\r\n\r\n> Modern financial and commercial networks often transfer digital assets between individuals and companies. Digital assets have many forms, including cryptocurrencies, fiat money equivalents such as CBDC, titles that represent ownership of physical assets and more. Numerous networks exist that allow to transfer such assets between network members, but interoperability between networks barely exists. The goal of the SAT Protocol is to enable digital asset transfer between networks, regardless of the networks' internal structure and technology.",
       "createdAt": "2023-07-30T17:00:41Z",
-      "updatedAt": "2023-07-30T17:00:41Z",
+      "updatedAt": "2023-08-01T18:20:25Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks Yaron.",
+          "createdAt": "2023-08-01T14:36:48Z",
+          "updatedAt": "2023-08-01T14:36:48Z"
+        },
+        {
+          "author": "yaronf",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Reopening per my comment to #5 (otherwise please close this issue).",
+          "createdAt": "2023-08-01T18:20:24Z",
+          "updatedAt": "2023-08-01T18:20:24Z"
+        }
+      ]
     },
     {
       "number": 4,
@@ -78,9 +93,24 @@
       "labels": [],
       "body": "In Sec. 3.2, we mention the applications App1 and App2. App2 is mentioned with no explanation. So first, we need to define that App2 is the Beneficiary application. But more importantly, I think it is rare that there's an application on the beneficiary side. In some cases (fiat currency and cryptocurrency) there may just be a passive account.",
       "createdAt": "2023-07-30T17:05:16Z",
-      "updatedAt": "2023-07-30T17:05:16Z",
+      "updatedAt": "2023-08-01T18:32:02Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This is a problematic area generally, because SATP needs to work for: (a) UTXO-based networks, and (b) Account-based networks, (c) Monolithic/legacy databases fronted by gateways, and (d) some future asset-control mechanism.\r\n\r\nToday, I think the best we can say is that \" App2 controls the assets of the Beneficiary in NW2\" (and same thing for App1 and the Originator in NW1).",
+          "createdAt": "2023-08-01T14:27:39Z",
+          "updatedAt": "2023-08-01T14:27:39Z"
+        },
+        {
+          "author": "yaronf",
+          "authorAssociation": "COLLABORATOR",
+          "body": "And add a comment that in some cases, there may be no App2?",
+          "createdAt": "2023-08-01T18:32:02Z",
+          "updatedAt": "2023-08-01T18:32:02Z"
+        }
+      ]
     },
     {
       "number": 5,
@@ -94,9 +124,24 @@
       "labels": [],
       "body": "The fact that all messages are signed/verified is not an assumption, it is a protocol requirement.",
       "createdAt": "2023-07-30T17:08:03Z",
-      "updatedAt": "2023-07-30T17:08:03Z",
+      "updatedAt": "2023-08-01T18:19:02Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks Yaron. Agree. I will correct this and mention this point up-front.",
+          "createdAt": "2023-08-01T14:23:18Z",
+          "updatedAt": "2023-08-01T14:23:18Z"
+        },
+        {
+          "author": "yaronf",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Process comment: I suggest to keep issues open until a PR is merged that addresses them. Otherwise we can easily lose them.",
+          "createdAt": "2023-08-01T18:19:02Z",
+          "updatedAt": "2023-08-01T18:19:02Z"
+        }
+      ]
     },
     {
       "number": 6,
@@ -110,9 +155,17 @@
       "labels": [],
       "body": "There's nothing technical about ownership. It is a legal term, and I doubt that it applies here. It may be an escrow arrangement, for example.\r\n\r\nSimilarly in Sec. 8, \"G2 is still the owner\".\r\n\r\nWe may want to replace the legal term \"to own\" by the more technical \"to manage\" (an asset), and explain what it means.",
       "createdAt": "2023-07-30T17:09:23Z",
-      "updatedAt": "2023-07-30T17:30:48Z",
+      "updatedAt": "2023-08-01T14:22:19Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": ">>> Temporary asset mint (3.2): Gateway G2 creates (mints) an\r\n>>> equivalent asset in NW2 assigned to itself as the owner.  This\r\n>>> step can be reversed (i.e. asset destroyed) in the case of the\r\n>>> failure in the commitment steps because G2 is still the owner of\r\n>>> the asset in NW2.\r\n\r\nWe could improve this description. \r\n\r\nAnd yes, G2 at this point is the legal owner and technical holder (holder of the key-pair that controls the asset in NW2).",
+          "createdAt": "2023-08-01T14:22:19Z",
+          "updatedAt": "2023-08-01T14:22:19Z"
+        }
+      ]
     },
     {
       "number": 7,
@@ -126,9 +179,17 @@
       "labels": [],
       "body": "Sec. 3.3 mentions that gateways are trusted to carry out the protocol correctly. This also means they are trusted from a security point of view.\r\n\r\nI think this is incorrect. IMO, from a security POV:\r\n* There is mutual trust between each gateway and the network that it represents.\r\n* When running the SAT protocol, GW1 is able to verify that GW2 is following the protocol correctly.\r\n* However, GW1 still relies on the veracity of GW2's signed statements (e.g. that it has extinguished an asset), and vice versa. The truth of such statements may need to be enforced by mechanisms (e.g. legal procedures) that are outside our scope.",
       "createdAt": "2023-07-30T17:16:34Z",
-      "updatedAt": "2023-07-30T17:16:34Z",
+      "updatedAt": "2023-08-01T00:55:24Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Great!  Absolutely agree with this.",
+          "createdAt": "2023-08-01T00:55:24Z",
+          "updatedAt": "2023-08-01T00:55:24Z"
+        }
+      ]
     },
     {
       "number": 8,
@@ -142,9 +203,24 @@
       "labels": [],
       "body": "\"Data transfer\" needs to be clarified or maybe removed. What do we mean by \"transfer of data only under authorization\", what is the state this bullet refers to, why do we even need a 2PC protocol for data transfer?",
       "createdAt": "2023-07-30T17:19:21Z",
-      "updatedAt": "2023-07-30T17:19:21Z",
+      "updatedAt": "2023-08-01T18:29:01Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Previously we had a long text in the older versions of the draft (before the draft become formal WG item) discussing the 3 modes. The group then agreed with the Chairs that this work should be postponed until we finish the current set of drafts.\r\n\r\nIf you are interested, Rama has moved some of the text about views and data sharing to the following two Individual drafts:\r\n\r\nhttps://datatracker.ietf.org/doc/draft-ramakrishna-satp-views-addresses/\r\n\r\nhttps://datatracker.ietf.org/doc/draft-ramakrishna-satp-data-sharing/\r\n\r\n\r\n\r\n\r\n",
+          "createdAt": "2023-08-01T01:00:16Z",
+          "updatedAt": "2023-08-01T01:00:16Z"
+        },
+        {
+          "author": "yaronf",
+          "authorAssociation": "COLLABORATOR",
+          "body": "So let's say that this is currently out of scope, and include an informational reference to https://datatracker.ietf.org/doc/draft-ramakrishna-satp-data-sharing/ for clarity.",
+          "createdAt": "2023-08-01T18:29:01Z",
+          "updatedAt": "2023-08-01T18:29:01Z"
+        }
+      ]
     },
     {
       "number": 9,
@@ -158,9 +234,24 @@
       "labels": [],
       "body": "* Durability: I suggest to remove this one, because it seems to be a property of each network rather than the protocol.\r\n* Byzantine correctness (maybe there is a better term for this): the protocol needs to survive not only unintentional failures, but also intentional failures and corruptions caused by one of the gateways being malicious.",
       "createdAt": "2023-07-30T17:22:12Z",
-      "updatedAt": "2023-07-30T17:22:12Z",
+      "updatedAt": "2023-08-01T18:26:03Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Actually, the ACID properties applies to the 2PC transaction itself (in classical distribute database designs), and not the databases or networks themselves. Some databases implement Transaction Monitors (TM) as endpoints (fronting the database) to permit the database to participate in the distributed transactions.\r\n\r\nIn the case of SATP, the TM construct is represented by the Gateways.\r\n\r\n\r\n>>> Byzantine correctness (maybe there is a better term for this): \r\n>>> the protocol needs to survive not only unintentional failures, \r\n>>> but also intentional failures and corruptions caused by one of \r\n>>> the gateways being malicious.\r\n\r\nThis is a topic that the WG has not yet discussed in-depth. For example, what if G2 purposely tries to deny transfers from completing.",
+          "createdAt": "2023-08-01T14:36:11Z",
+          "updatedAt": "2023-08-01T14:36:11Z"
+        },
+        {
+          "author": "yaronf",
+          "authorAssociation": "COLLABORATOR",
+          "body": "IMO eventually you'd need a legal action, hence my text in #13. So yes, we need to be very crisp when defining this property.",
+          "createdAt": "2023-08-01T18:26:02Z",
+          "updatedAt": "2023-08-01T18:26:02Z"
+        }
+      ]
     },
     {
       "number": 10,
@@ -190,9 +281,17 @@
       "labels": [],
       "body": "I don't see how we can ever have interoperability if Stage 0 is out of scope. We could define a minimal set of data elements being transmitted, and expect extensions to cover the legal requirements that will for sure pop up. There is no forward compatibility issue because gateways can always refuse incoming requests.\r\n\r\nAlso, version negotiation should be in Stage 0 and not Stage 1 (see Sec. 9).",
       "createdAt": "2023-07-30T17:26:17Z",
-      "updatedAt": "2023-07-30T17:26:17Z",
+      "updatedAt": "2023-08-01T00:54:06Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Agree.  We are early days in working on Stage-0 in that we have just started discussing Stage-0 in earnest in the past 3 months.\r\n\r\nThis was the focus of Denis' presentation at IETF117.  \r\n",
+          "createdAt": "2023-08-01T00:54:06Z",
+          "updatedAt": "2023-08-01T00:54:06Z"
+        }
+      ]
     },
     {
       "number": 12,
@@ -206,7 +305,7 @@
       "labels": [],
       "body": "Sec. 6: Why is attestation even in scope? We are setting up a secure channel, and this may include (per policy on both gateways) authentication of both sides, and possibly attestation. But ideally, this should all be done at the TLS layer.\r\n\r\nAnd then there's the question whether it is even expected. Typically in a cross-domain setting, authentication is much more relevant than attestation.",
       "createdAt": "2023-07-30T17:28:14Z",
-      "updatedAt": "2023-08-01T00:49:30Z",
+      "updatedAt": "2023-08-01T18:22:50Z",
       "closedAt": null,
       "comments": [
         {
@@ -229,6 +328,13 @@
           "body": "Apologies Yaron,\r\n\r\nI was looking at the wrong text :-)\r\n\r\n>>> Mutual device attestations: In cases where device attestation\r\n>>> [RATS] is required, each gateway must yield attestation evidence\r\n>>> to the other regarding its configuration.  A gateway may take on\r\n>>>  the role as a attestation verifier, or it may rely on an external\r\n>>>  verifier to appraise the received evidence.\r\n\r\nRATS device-attestation is mentioned as a possible future capability that is not currently out-of-scope for the SATP WG.\r\n\r\nIf RATS WG could pick-up this item (e.g. define SBOM etc for gateways), that would be great.",
           "createdAt": "2023-08-01T00:49:29Z",
           "updatedAt": "2023-08-01T00:49:29Z"
+        },
+        {
+          "author": "yaronf",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It's not clear from the document that this is out of scope and pending a potential RATS action.",
+          "createdAt": "2023-08-01T18:22:50Z",
+          "updatedAt": "2023-08-01T18:22:50Z"
         }
       ]
     },
@@ -244,9 +350,17 @@
       "labels": [],
       "body": "I'm afraid there's no escaping it. Here's some proposed text that may be included as it own section or incorporated into Policy Considerations. And yes, it needs to be approved by a legal expert.\r\n\r\n# Legal Considerations\r\nFor each pair of gateways, G1 and G2, representing the networks NW1 and NW2, the following legal guarantees must exist in order for this protocol to be effective: These guarantees should be enacted as a combination of legislation in the relevant jurisdictions, and binding contracts.\r\n* G1 is allowed to act on behalf of NW1, and similarly G2 with NW2.\r\n* G1 is liable for statements that it digitally signs, and similarly G2.\r\n* G2 is allowed to mint assets that were originally minted by NW1, and those assets have the same standing as the originals.\r\n\r\n",
       "createdAt": "2023-07-30T17:34:30Z",
-      "updatedAt": "2023-07-30T17:34:30Z",
+      "updatedAt": "2023-08-01T00:51:27Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks for the text. Yes agree, there is no escaping.\r\n\r\nIf no one objects, we could paste it into the next rev of the SATP-Architecture draft ",
+          "createdAt": "2023-08-01T00:51:27Z",
+          "updatedAt": "2023-08-01T00:51:27Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -290,13 +404,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2023-07-29T19:06:47Z",
-      "updatedAt": "2023-07-30T16:29:24Z",
+      "updatedAt": "2023-08-01T18:47:25Z",
       "baseRepository": "ietf-satp/draft-ietf-satp-architecture",
       "baseRefName": "main",
       "baseRefOid": "e46d714f81b8c39f3a0d32bf6b62b7fa8fcd77f2",
       "headRepository": "ietf-satp/draft-ietf-satp-architecture",
       "headRefName": "editorials2",
-      "headRefOid": "847fd385764c98877df45220f70574d5482b7def",
+      "headRefOid": "2ae984321ca596673e8ee25e0e3842f785194c44",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
