@@ -152,6 +152,7 @@ informative:
 #    date: February 2019
 #    target: https://doi.org/10.1145/3209623
 #    title: Blockchains From a Distributed Computing Perspective, Communications of the ACM, vol. 62, no. 2, pp. 78-85
+  I-D.ramakrishna-satp-data-sharing:
   IDevID:
     author:
     - ins: M. Richardson
@@ -416,7 +417,8 @@ at the destination network.
 in such a way that the data can be verified by a third party.
 The data transfer mode addresses the use-cases where
 the state update in one network or system depends on the existence of state information
-recorded in a different network or system.
+recorded in a different network or system. We note that data transfer is not
+currently in scope for this work. Further details can be found in [I-D.ramakrishna-satp-data-sharing].
 
  * Asset exchange (swap): This refers to the case where
 two users are present in two networks,
