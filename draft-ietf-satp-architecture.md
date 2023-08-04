@@ -221,7 +221,9 @@ This document proposes an interoperability architecture for
 
 # Introduction
 {: #introduction}
- This document proposes an interoperability architecture based on gateways,
+As a core feature, modern financial and commercial networks transfer digital assets between individuals and companies. Digital assets have many forms, including cryptocurrencies, fiat money equivalents such as CBDC (Central Bank Digital Currency), titles that represent ownership of physical assets and more. Numerous networks exist that allow to transfer such assets between network members, but interoperability between networks is still scarce. The goal of the Secure Asset Transfer (SAT) Protocol is to enable digital asset transfer between networks, regardless of the networks' internal structure and technology.
+
+This document proposes an interoperability architecture based on gateways,
       which are points of interconnection between networks or systems.
 
 There are several services that may be offered by a gateway,
@@ -237,7 +239,7 @@ that must satisfy certain security, privacy and atomicity requirements.
 
 The purpose of this architecture document is to provide a technical framework
 within which to define the required properties of
-a gateway that supports the secure asset transfer protocol.
+a gateway that supports the Secure Asset Transfer Protocol.
 
 # Terminology
 {: #terms}
