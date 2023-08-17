@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-08-06T00:40:53.763389+00:00",
+  "timestamp": "2023-08-17T00:35:31.832248+00:00",
   "repo": "ietf-satp/draft-ietf-satp-architecture",
   "labels": [
     {
@@ -265,9 +265,17 @@
       "labels": [],
       "body": "* 5.4, first paragraph: we just said we only support one gateway per network, and now we say there are several! It's probably a matter of terminology: should we speak about gateway clusters and cluster members? \r\n* 5.4: I disagree that we need to standardize log data for interoperability. IMO this is not the case, because cluster behavior is almost always an internal implementation detail, people usually don't try to mix multiple vendors in a cluster. IMO we only standardize it because it is error prone, and if we don't define it in detail, people will get it wrong.",
       "createdAt": "2023-07-30T17:24:35Z",
-      "updatedAt": "2023-07-30T17:24:35Z",
+      "updatedAt": "2023-08-15T13:36:44Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "findthomas",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "For 5.4 1st paragraph:  The paragraph can be improved. There may be several gateways (e.g. N) in front of a given network. For crash-recovery using the primary-backup strategy, each gateway would always need a backup (shadow).  The implementation question becomes:  does a network actually have 2N gateways (N active; N shadow), or is it the case that the shadows are actually other gateways in the set of N.\r\n\r\nPerhaps this is a topic for the group to discuss.\r\n\r\nFor 5.4 on standardized logs, I think we mean \"standardized\" within each network, so that each gateway has the ability to parse through the logs of other gateways in the sane network (assuming access is granted). \r\n\r\nAlso, the term \"logs\" here is used to mean log of the SATP messages that have been sent/received by a gateway. (It's not \"logs\" in the broad sense of the word).\r\n\r\nWe will fix the text to make these points clear.\r\n\r\n",
+          "createdAt": "2023-08-15T13:36:44Z",
+          "updatedAt": "2023-08-15T13:36:44Z"
+        }
+      ]
     },
     {
       "number": 11,
