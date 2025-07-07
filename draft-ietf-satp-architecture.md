@@ -412,9 +412,9 @@ where a successful asset transfer causes the asset
 to be extinguished in the origin network and be created (generated)
 at the destination network.
 
- * Data transfer: This refers to the transfer of data only under authorization,
+ * Data sharing: This refers to the sharing of data only under authorization,
 in such a way that the data can be verified by a third party.
-The data transfer mode addresses the use-cases where
+The data sharing mode addresses the use-cases where
 the state update in one network or system depends on the existence of state information
 recorded in a different network or system.
 
