@@ -5,12 +5,12 @@
 Secure Asset Transfer Protocol                               T. Hardjono
 Internet-Draft                                                       MIT
 Intended status: Informational                             M. Hargreaves
-Expires: 31 January 2024                                   Quant Network
+Expires: 2 February 2026                                   Quant Network
                                                                 N. Smith
                                                                    Intel
                                                           V. Ramakrishna
                                                                      IBM
-                                                            30 July 2023
+                                                           1 August 2025
 
 
        Secure Asset Transfer (SAT) Interoperability Architecture
@@ -54,11 +54,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 January 2024.
+   This Internet-Draft will expire on 2 February 2026.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -271,7 +271,7 @@ Table of Contents
       the relevant jurisdictions where the gateways are operating.
 
    *  Gateway message signatures: All messages between gateways are
-      assumed to be signed and verified (e.g.  X.509).
+      assumed to be signed and verified (e.g. X.509).
 
    *  Transitory ownership of asset by gateway: Assets being transferred
       via SAT will technically be owned by gateway in transit and
@@ -297,9 +297,9 @@ Table of Contents
       the origin network and be created (generated) at the destination
       network.
 
-   *  Data transfer: This refers to the transfer of data only under
+   *  Data sharing: This refers to the sharing of data only under
       authorization, in such a way that the data can be verified by a
-      third party.  The data transfer mode addresses the use-cases where
+      third party.  The data sharing mode addresses the use-cases where
       the state update in one network or system depends on the existence
       of state information recorded in a different network or system.
 
@@ -471,7 +471,7 @@ Table of Contents
    gateway crash, network failure, etc.) should take into consideration
    the aspects of secure channel establishment and the aspects of the
    transfer protocol resumption.  In some cases, a new secure channel
-   (e.g.  TLS session) may need to be established between the two
+   (e.g. TLS session) may need to be established between the two
    gateways, before a resumption of the transfer can begin.
 
    The log-data collected by a gateway acts also as a checkpoint
@@ -849,7 +849,7 @@ Table of Contents
    Gateways are of particular interest to attackers because they enable
    the transferal of digital assets to external networks, which may or
    may not be regulated.  As such, hardening technologies and tamper-
-   resistant crypto-processors (e.g.  TPM, SGX) should be used for
+   resistant crypto-processors (e.g. TPM, SGX) should be used for
    implementations of gateways [HS2019].
 
 11.  Policy Considerations

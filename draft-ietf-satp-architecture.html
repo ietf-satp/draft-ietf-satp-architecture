@@ -14,24 +14,23 @@
       the secure transfer of assets between two networks or
       systems based on the gateway model. 
     " name="description">
-<meta content="xml2rfc 3.17.4" name="generator">
+<meta content="xml2rfc 3.30.0" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-ietf-satp-architecture-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.17.4
-    Python 3.11.4
-    ConfigArgParse 1.5.3
-    google-i18n-address 3.1.0
+  xml2rfc 3.30.0
+    Python 3.12.11
+    ConfigArgParse 1.7
+    google-i18n-address 3.1.1
     intervaltree 3.1.0
-    Jinja2 3.1.2
-    lxml 4.9.3
-    platformdirs 3.9.1
-    pycountry 22.3.5
-    PyYAML 6.0
-    requests 2.31.0
-    setuptools 67.7.2
-    six 1.16.0
-    wcwidth 0.2.6
+    Jinja2 3.1.6
+    lxml 5.3.1
+    platformdirs 4.3.8
+    pycountry 24.6.1
+    PyYAML 6.0.2
+    requests 2.32.4
+    setuptools 80.9.0
+    wcwidth 0.2.13
 -->
 <link href="draft-ietf-satp-architecture.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -167,31 +166,6 @@
 }
 
 @font-face {
-  font-family: 'Cabin Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-vietnamese.woff2') format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: 'Cabin Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Cabin Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
   font-family: 'Oxygen Mono';
   font-style: normal;
   font-weight: 400;
@@ -208,6 +182,77 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-greek.woff2') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-greek.woff2') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   color-scheme: light dark;
   --background-color: #fff;
@@ -220,6 +265,7 @@
   --pilcrow-strong: #bbb;
   --small-font-size: 14.5px;
   --font-mono: 'Oxygen Mono', monospace;
+  --font-title: "Sofia Sans Semi Condensed", sans-serif;
   scrollbar-color: #bbb #eee;
 }
 body {
@@ -237,9 +283,15 @@ body {
 }
 
 /* headings */
+section {
+  clear: both;
+}
+.section-number {
+  padding-right: 0.5em;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cabin Condensed", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-title);
+  font-weight: 680;
   margin: 0.8em 0 0.3em;
   font-size-adjust: 0.5;
   color: var(--title-color);
@@ -268,6 +320,7 @@ h4, h5, h6 {
 /* general structure */
 .author {
   padding-bottom: 0.3em;
+  vertical-align: top;
 }
 #abstract+p {
   font-size: 18px;
@@ -345,25 +398,26 @@ svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
 ol, ul {
   padding: 0;
   margin: 0 0 0.5em 2em;
-}
-:is(ol, ul) :is(ol, ul) {
-  margin-left: 1em;
+  & :is(ol, ul) {
+    margin-left: 1em;
+  }
 }
 li {
   margin: 0 0 0.25em 0;
 }
-.ulCompact li {
-  margin: 0;
-}
 ul.empty, .ulEmpty {
   list-style-type: none;
-}
-ul.empty li, .ulEmpty li {
-  margin-top: 0.5em;
+  & li {
+    margin-top: 0.5em;
+  }
 }
 :is(ul, ol).compact, .ulCompact, .olCompact {
-  line-height: 1;
   margin: 0 0 0 2em;
+  & li {
+    margin: 0;
+    & :first-child { margin-top: 0; }
+    & :last-child { margin-bottom: 0; }
+  }
 }
 
 /* definition lists */
@@ -371,38 +425,39 @@ dl {
   clear: left;
   --indent: 3ch;
   /* --indent: attr(indent ch); not supported in any browser, but we can dream */
+  &.olPercent {
+    --indent: 5ch;
+    & > dt {
+      min-width: calc(var(--indent) - 2ch);
+    }
+  }
+  &.olPercent > dt {
+    float: none;
+  }
+
+  dl > dd > & {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
 }
-dl.olPercent {
-  --indent: 5ch;
-}
-dl > dt {
+dl:not(.dlNewline) > dt {
   float: left;
   margin-right: 2ch;
   min-width: 8ch;
-}
-dl.dlNewline > dt {
-  float: none;
 }
 dl > dd {
   margin-bottom: .8em;
   margin-left: var(--indent) !important; /* stupid element overrides */
   min-height: 2ex;
 }
-dl.olPercent > dt {
-  min-width: calc(var(--indent) - 2ch);
-}
 :is(dl.compact, .dlCompact) > dd {
   margin-bottom: 0;
-}
-:is(dl.compact, .dlCompact) > dd > :is(:first-child, .break:first-child + *) {
-  margin-top: 0;
-}
-:is(dl.compact, .dlCompact) > dd > :is(:last-child) {
-  margin-bottom: 0;
-}
-dl > dd > dl {
-  margin-top: 0.5em;
-  margin-bottom: 0;
+  & > :is(:first-child, .break:first-child + *) {
+    margin-top: 0;
+  }
+  & > :is(:last-child) {
+    margin-bottom: 0;
+  }
 }
 :is(dd, span).break {
   display: none;
@@ -466,6 +521,7 @@ figcaption, caption {
   font-style: italic;
   margin: 0.5em 1.5em;
   text-align: left;
+  caption-side: bottom;
 }
 @media screen {
   /* Auto-collapse boilerplate. */
@@ -483,7 +539,11 @@ figcaption, caption {
   }
   pre, svg {
     display: inline-block;
-    overflow-x: auto;
+    /* In the horizontal direction, sometimes people make over-sized figures.
+       Scrollbars for those is therefore necessary: auto adds them as necessary..
+       In the vertical direction, the line-height can combine with the font
+       asender/descender height to produce scrollbars: hidden avoids that. */
+    overflow: auto hidden;
   }
   pre {
     max-width: 100%;
@@ -520,6 +580,7 @@ cite {
 
 /* tables */
 table {
+  width: auto;
   max-width: 100%;
   margin: 0 0 1em;
   border-collapse: collapse;
@@ -534,6 +595,16 @@ table.center {
 table.left {
   margin-right: auto;
 }
+table .text-left {
+  text-align: left;
+}
+table .text-center {
+  text-align: center;
+}
+table .text-right {
+  text-align: right;
+}
+
 thead, tbody {
   border: 1px solid var(--line-color);
 }
@@ -564,9 +635,11 @@ a.pilcrow {
   margin-left: 3px;
   opacity: 0.2;
   user-select: none;
+  &[href] {
+    color: var(--pilcrow-weak);
+    &:hover { text-decoration: none; }
+  }
 }
-a.pilcrow[href] { color: var(--pilcrow-weak); }
-a.pilcrow[href]:hover { text-decoration: none; }
 @media not print {
   :hover > a.pilcrow {
     opacity: 1;
@@ -606,26 +679,28 @@ sub, sup {
   font-size: var(--small-font-size);
   line-height: 18px;
   --identifier-width: 15ch;
-}
-#identifiers dt {
-  width: var(--identifier-width);
-  min-width: var(--identifier-width);
-  clear: left;
-  float: left;
-  text-align: right;
-  margin-right: 1ch;
-}
-#identifiers dd {
-  margin: 0;
-  margin-left: calc(1em + var(--identifier-width)) !important;
-  min-width: 5em;
-}
-#identifiers .authors .author {
-  display: inline-block;
-  margin-right: 1.5em;
-}
-#identifiers .authors .org {
-  font-style: italic;
+  & dt {
+    width: var(--identifier-width);
+    min-width: var(--identifier-width);
+    clear: left;
+    float: left;
+    text-align: right;
+    margin-right: 1ch;
+  }
+  & dd {
+    margin: 0;
+    margin-left: calc(1em + var(--identifier-width)) !important;
+    min-width: 5em;
+  }
+  & .authors {
+    & .author {
+      display: inline-block;
+      margin-right: 1.5em;
+    }
+    & .org {
+      font-style: italic;
+    }
+  }
 }
 
 /* The prepared/rendered info at the very bottom of the page */
@@ -636,9 +711,6 @@ sub, sup {
   margin-top: 2em;
 }
 .docInfo .prepared {
-  float: left;
-}
-.docInfo .prepared {
   float: right;
 }
 
@@ -646,47 +718,48 @@ sub, sup {
 #toc {
   padding: 0.75em 0 2em 0;
   margin-bottom: 1em;
-}
-#toc nav ul {
-  margin: 0 0.5em 0 0;
-  padding: 0;
-  list-style: none;
-}
-#toc nav li {
-  line-height: 1.3em;
-  margin: 0.75em 0;
-  padding-left: 1.2em;
-  text-indent: -1.2em;
-}
-#toc a.xref {
-  white-space: normal;
-}
-/* references */
-.references dt {
-  text-align: right;
-  font-weight: bold;
-  min-width: 10ch;
-  margin-right: 1.5ch;
-}
-.references dt:target::before {
-  content: "⇒";
-  width: 15px;
-  margin: 0 10px 0 -25px;
-}
-.references dd {
-  margin-left: 12ch !important;
-  overflow: auto;
+
+  & nav {
+    & ul {
+      margin: 0 0.5em 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    & li {
+      line-height: 1.3em;
+      margin: 2px 0;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+  }
+  & a.xref {
+    white-space: normal;
+  }
 }
 
-.refInstance {
-  margin-bottom: 1.25em;
+.references {
+  & > dt {
+    text-align: right;
+    font-weight: bold;
+    min-width: 10ch;
+    margin-right: 1.5ch;
+    &:target::before {
+      content: "⇒";
+      margin: 0 10px 0 -25px;
+    }
+  }
+  & > dd {
+    margin-left: 12ch !important;
+    overflow: visible;
+    & .refInstance {
+      margin-bottom: 0.8em;
+    }
+    & .ascii {
+      margin-bottom: 0.25em;
+    }
+  }
 }
 
-.references .ascii {
-  margin-bottom: 0.25em;
-}
-
-/* index */
 #rfc\.index\.index + ul {
   margin-left: 0;
 }
@@ -694,21 +767,33 @@ sub, sup {
 /* authors */
 address.vcard {
   font-style: normal;
-  margin: 1em 0;
+  max-width: 20em;
+  margin: 1em auto 1em 0;
+
+  & .nameRole {
+    font-weight: 700;
+    margin-left: 0;
+  }
+  & .label {
+    margin: 0.5em 0;
+  }
+  & .type {
+    display: none;
+  }
+  & .alternative-contact {
+    margin: 0.5em 0 0.25em 0;
+  }
+  & .non-ascii {
+    margin: 0 0 0 2em;
+  }
+  & div.left {
+    text-align: left;
+  }
+  & div.right {
+    text-align: right;
+  }
 }
-address.vcard .nameRole {
-  font-weight: 700;
-  margin-left: 0;
-}
-address.vcard .label {
-  margin: 0.5em 0;
-}
-address.vcard .type {
-  display: none;
-}
-.alternative-contact {
-  margin: 1.5em 0 1em;
-}
+
 hr.addr {
   border-top: 1px dashed;
   margin: 0;
@@ -730,6 +815,7 @@ hr.addr {
   }
 }
 
+/* Comments */
 .rfcEditorRemove p:first-of-type {
   font-style: italic;
 }
@@ -740,20 +826,41 @@ hr.addr {
 .crefSource {
   font-style: italic;
 }
-/* alternative layout for smaller screens */
+
+@media screen {
+  #toc nav {
+    font-family: var(--font-title);
+    font-weight: 360;
+    & > ul { margin-bottom: 2em; }
+    & ul {
+      margin: 0 0 0 4px;
+      & :is(p, li) {
+        margin: 2px 0;
+      }
+    }
+  }
+  #toc a.toplink {
+    float: right;
+  }
+}
+@media not screen {
+  #toc a.toplink {
+    display: none;
+  }
+}
+
+
+/* TOC layout for smaller screens */
 @media screen and (max-width: 929px) {
   #toc {
     position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
-    padding: 0;
+    padding: 1px 0 0 0;
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
-  }
-  #toc.active {
-      opacity: 1;
   }
   #toc h2 {
     margin: 0;
@@ -766,17 +873,17 @@ hr.addr {
     background-color: #444;
     color: white;
     cursor: pointer;
-  }
-  #toc h2::before { /* css hamburger */
-    float: right;
-    position: relative;
-    width: 1em;
-    height: 1px;
-    left: -164px;
-    margin: 8px 0 0 0;
-    background: white none repeat scroll 0 0;
-    box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
-    content: "";
+    &::before { /* css hamburger */
+      float: right;
+      position: relative;
+      width: 1em;
+      height: 1px;
+      left: -164px;
+      margin: 8px 0 0 0;
+      background: white none repeat scroll 0 0;
+      box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+      content: "";
+    }
   }
   #toc nav {
     display: none;
@@ -787,14 +894,13 @@ hr.addr {
     height: calc(100vh - 48px);
     border-left: 1px solid #ddd;
   }
-  #toc.active nav {
-    display: block;
+  #toc.active {
+    opacity: 1;
+    & nav { display: block; }
   }
   /* Make the collapsed ToC header render white on gray also when it's a link */
   #toc h2 a,
-  #toc h2 a:link,
-  #toc h2 a:focus,
-  #toc h2 a:hover,
+  #toc h2 a:is(:link, :focus, :hover),
   #toc a.toplink,
   #toc a.toplink:hover {
     color: white;
@@ -802,11 +908,11 @@ hr.addr {
     text-decoration: none;
   }
   #toc a.toplink {
-    margin-top: 2px;
+    margin: 2px 0.5em 0;
   }
 }
 
-/* alternative layout for wide screens */
+/* TOC layout for wide screens */
 @media screen and (min-width: 930px) {
   body {
     padding-right: 360px;
@@ -835,20 +941,12 @@ hr.addr {
     overscroll-behavior: contain;
     scrollbar-width: thin;
   }
-  #toc nav > ul  {
-    margin-bottom: 2em;
-  }
-  #toc ul {
-    margin: 0 0 0 4px;
-    font-size: var(--small-font-size);
-  }
-  #toc ul :is(p, li) {
-    margin: 2px 0;
-    line-height: 22px;
-  }
   img { /* future proofing */
     max-width: 100%;
     height: auto;
+  }
+  #toc a.toplink {
+    margin: 8px 0.5em 0;
   }
 }
 
@@ -871,16 +969,13 @@ hr.addr {
     border-top: none;
     padding-top: 0;
   }
-  figure, pre {
+  figure, pre, .vcard {
     page-break-inside: avoid;
-  }
-  figure {
-    overflow: scroll;
   }
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
-  h2+*, h3+*, h4+*, h5+*, h6+* {
+  :is(h2, h3, h4, h5, h6)+*, dd {
     page-break-before: avoid;
   }
   pre {
@@ -916,104 +1011,6 @@ hr.addr {
   size: A4;
   margin-bottom: 45mm;
   padding-top: 20px;
-}
-
-/* Changes introduced to fix issues found during implementation */
-
-/* Separate body from document info even without intervening H1 */
-section {
-  clear: both;
-}
-
-/* Top align author divs, to avoid names without organization dropping level with org names */
-.author {
-  vertical-align: top;
-}
-
-/* Style section numbers with more space between number and title */
-.section-number {
-  padding-right: 0.5em;
-}
-
-/* Add styling for a link in the ToC that points to the top of the document */
-a.toplink {
-  float: right;
-  margin: 8px 0.5em 0;
-}
-
-/* Provide styling for table cell text alignment */
-table .text-left {
-  text-align: left;
-}
-table .text-center {
-  text-align: center;
-}
-table .text-right {
-  text-align: right;
-}
-
-/* Make the alternative author contact information look less like just another
-   author, and group it closer with the primary author contact information */
-.alternative-contact {
-  margin: 0.5em 0 0.25em 0;
-}
-address .non-ascii {
-  margin: 0 0 0 2em;
-}
-
-/* With it being possible to set tables with alignment
-  left, center, and right, { width: 100%; } does not make sense */
-table {
-  width: auto;
-}
-
-/* Avoid reference text that sits in a block with very wide left margin,
-   because of a long floating dt label.*/
-.references dd {
-  overflow: visible;
-}
-
-/* Control caption placement */
-caption {
-  caption-side: bottom;
-}
-
-/* Limit the width of the author address vcard, so names in right-to-left
-   script don't end up on the other side of the page. */
-
-address.vcard {
-  max-width: 20em;
-  margin-right: auto;
-}
-
-/* For address alignment dependent on LTR or RTL scripts */
-address div.left {
-  text-align: left;
-}
-address div.right {
-  text-align: right;
-}
-
-/* Give the table caption label the same styling as the figcaption */
-
-@media print {
-  .toplink {
-    display: none;
-  }
-
-  /* avoid overwriting the top border line with the ToC header */
-  #toc {
-    padding-top: 1px;
-  }
-
-  /* Avoid page breaks inside dl and author address entries */
-  dd {
-    page-break-before: avoid;
-  }
-  .vcard {
-    page-break-inside: avoid;
-  }
-
 }
 
 /* Dark mode. */
@@ -1052,11 +1049,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">SAT Architecture</td>
-<td class="right">July 2023</td>
+<td class="right">August 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Hardjono, et al.</td>
-<td class="center">Expires 31 January 2024</td>
+<td class="center">Expires 2 February 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1069,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-satp-architecture-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-07-30" class="published">30 July 2023</time>
+<time datetime="2025-08-01" class="published">1 August 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-01-31">31 January 2024</time></dd>
+<dd class="expires"><time datetime="2026-02-02">2 February 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1138,7 +1135,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 31 January 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 2 February 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1147,7 +1144,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2023 IETF Trust and the persons identified as the
+            Copyright (c) 2025 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1278,57 +1275,72 @@ a gateway that supports the secure asset transfer protocol.<a href="#section-1-5
 We borrow terminology from NIST and ISO as much as possible,
 introducing new terms only when needed:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-2.1">Asset network (system): The network or system where a digital asset is utilized.<a href="#section-2-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-2-2.1">
+          <p id="section-2-2.1.1">Asset network (system): The network or system where a digital asset is utilized.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.2">Asset Transfer Protocol: The protocol used to transfer (move)
-a digital asset from one network to another using gateways.<a href="#section-2-2.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.2">
+          <p id="section-2-2.2.1">Asset Transfer Protocol: The protocol used to transfer (move)
+a digital asset from one network to another using gateways.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.3">Origin network: The current network where the digital asset is located.<a href="#section-2-2.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.3">
+          <p id="section-2-2.3.1">Origin network: The current network where the digital asset is located.<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.4">Destination network: The network to which a digital asset is to be transferred.<a href="#section-2-2.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.4">
+          <p id="section-2-2.4.1">Destination network: The network to which a digital asset is to be transferred.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.5">Resource Domain: The collection of resources and entities
+        <li class="normal" id="section-2-2.5">
+          <p id="section-2-2.5.1">Resource Domain: The collection of resources and entities
 participating within an asset network.
-The domain denotes a boundary for permissible or authorized actions on resources.<a href="#section-2-2.5" class="pilcrow">¶</a>
+The domain denotes a boundary for permissible or authorized actions on resources.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.6">Interior Resources: The various interior protocols,
+        <li class="normal" id="section-2-2.6">
+          <p id="section-2-2.6.1">Interior Resources: The various interior protocols,
 data structures and cryptographic constructs that
-are a core part of an asset network or system.<a href="#section-2-2.6" class="pilcrow">¶</a>
+are a core part of an asset network or system.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.7">Exterior Resources: The various protocols,
+        <li class="normal" id="section-2-2.7">
+          <p id="section-2-2.7.1">Exterior Resources: The various protocols,
 data structures and cryptographic constructs
-that are outside of (external to) the network or system.<a href="#section-2-2.7" class="pilcrow">¶</a>
+that are outside of (external to) the network or system.<a href="#section-2-2.7.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.8">Gateway: The collection of services which connects
+        <li class="normal" id="section-2-2.8">
+          <p id="section-2-2.8.1">Gateway: The collection of services which connects
 to a minimum of one network or system,
-and which implements the secure asset transfer protocol.<a href="#section-2-2.8" class="pilcrow">¶</a>
+and which implements the secure asset transfer protocol.<a href="#section-2-2.8.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.9">Entity public-key pair: This the private-public key pairs of an entity,
+        <li class="normal" id="section-2-2.9">
+          <p id="section-2-2.9.1">Entity public-key pair: This the private-public key pairs of an entity,
 where the public-key is available and verifiable outside the network.
 Among others, it may be utilized for interactions withother entities
 from outside the network.
 The term is used to distinguish this public-key from other key-pairs
-belonging to the same entity, but which is only available within the (private) network.<a href="#section-2-2.9" class="pilcrow">¶</a>
+belonging to the same entity, but which is only available within the (private) network.<a href="#section-2-2.9.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.10">Originator: Person or organization in an origin network seeking
-the transfer of a digital asset to a beneficiary located in a remote network.<a href="#section-2-2.10" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.10">
+          <p id="section-2-2.10.1">Originator: Person or organization in an origin network seeking
+the transfer of a digital asset to a beneficiary located in a remote network.<a href="#section-2-2.10.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.11">Beneficiary: Person or organization in an destination network seeking
-to receive the transfer of a digital asset from an originator located in a remote network.<a href="#section-2-2.11" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.11">
+          <p id="section-2-2.11.1">Beneficiary: Person or organization in an destination network seeking
+to receive the transfer of a digital asset from an originator located in a remote network.<a href="#section-2-2.11.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.12">Gateway device identity: The identity of the device implementing the gateway functions.
-The term is used in the sense of IDevID (IEEE 802.1AR) or EK/AIK (in TPM1.2 and TPM2.0) <span>[<a href="#IDevID" class="cite xref">IDevID</a>]</span>.<a href="#section-2-2.12" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.12">
+          <p id="section-2-2.12.1">Gateway device identity: The identity of the device implementing the gateway functions.
+The term is used in the sense of IDevID (IEEE 802.1AR) or EK/AIK (in TPM1.2 and TPM2.0) <span>[<a href="#IDevID" class="cite xref">IDevID</a>]</span>.<a href="#section-2-2.12.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.13">Gateway owner: The entity that owns and operates a gateway within a network.<a href="#section-2-2.13" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.13">
+          <p id="section-2-2.13.1">Gateway owner: The entity that owns and operates a gateway within a network.<a href="#section-2-2.13.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.14">Application Context-ID: The relevant identifier used by originator's application and
+        <li class="normal" id="section-2-2.14">
+          <p id="section-2-2.14.1">Application Context-ID: The relevant identifier used by originator's application and
 the beneficiary's application to identify the context of the asset transfer at the gateway level.
 The context identifier may also be used to bind the application to
-the selected gateway for the given transfer instance, identified by a Session-ID.<a href="#section-2-2.14" class="pilcrow">¶</a>
+the selected gateway for the given transfer instance, identified by a Session-ID.<a href="#section-2-2.14.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.15">Gateway Session-ID: This is the identifier used between the sender gateway and
+        <li class="normal" id="section-2-2.15">
+          <p id="section-2-2.15.1">Gateway Session-ID: This is the identifier used between the sender gateway and
 the recipient gateway to identify the specific transfer instance.
-The Session-ID must be included in all messages between the gateways.<a href="#section-2-2.15" class="pilcrow">¶</a>
+The Session-ID must be included in all messages between the gateways.<a href="#section-2-2.15.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-2-3">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
@@ -1351,15 +1363,17 @@ appear in all capitals, as shown here.<a href="#section-2-3" class="pilcrow">¶<
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-design-principles" class="section-name selfRef">Design Principles</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="section-3.1-1.1">Opaque network resources:
+<li class="normal" id="section-3.1-1.1">
+            <p id="section-3.1-1.1.1">Opaque network resources:
 The interior resources of each network are assumed
 to be opaque to (hidden from) external entities.
 Any resources to be made accessible to an external entity
-must be made explicitly accessible by a gateway with proper authorization.<a href="#section-3.1-1.1" class="pilcrow">¶</a>
+must be made explicitly accessible by a gateway with proper authorization.<a href="#section-3.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.1-1.2">Externalization of value:
+          <li class="normal" id="section-3.1-1.2">
+            <p id="section-3.1-1.2.1">Externalization of value:
 The asset transfer protocol is agnostic (oblivious)
-to the economic or monetary value (if any) of the digital asset being transferred.<a href="#section-3.1-1.2" class="pilcrow">¶</a>
+to the economic or monetary value (if any) of the digital asset being transferred.<a href="#section-3.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-3.1-2">The opaque resources principle permits the architecture
@@ -1381,29 +1395,34 @@ where contextual information is placed at the endpoints of the transfer.<a href=
 <p id="section-3.2-1">The following conditions are assumed to have occurred,
 leading to the invocation of the asset transfer protocol between two gateways:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.2-2.1">Application level context establishment: The transfer request from an
+<li class="normal" id="section-3.2-2.1">
+            <p id="section-3.2-2.1.1">Application level context establishment: The transfer request from an
     Originator utilizing an application (App1) in the origin network is assumed
     to have occurred, and that some context-identifier has subsequently been derived
     by the respective applications (App1 and App2).
     Furthermore, this context-identifier is assumed to have been delivered
     by the each application to its corresponding gateway,
     permiting each gateway to internally bind the
-    transfer session-identifier to that context-identifier.<a href="#section-3.2-2.1" class="pilcrow">¶</a>
+    transfer session-identifier to that context-identifier.<a href="#section-3.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.2-2.2">Identification of asset to be transferred: The applications at
+          <li class="normal" id="section-3.2-2.2">
+            <p id="section-3.2-2.2.1">Identification of asset to be transferred: The applications at
 the originator and the beneficiary are assumed to have identified
-the digital asset to be transferred.<a href="#section-3.2-2.2" class="pilcrow">¶</a>
+the digital asset to be transferred.<a href="#section-3.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.2-2.3">Identification of originator and beneficiary:
+          <li class="normal" id="section-3.2-2.3">
+            <p id="section-3.2-2.3.1">Identification of originator and beneficiary:
 The originator and beneficiary are assumed to have been
 identified and that consent has been obtained from
-both parties regarding the asset transfer.<a href="#section-3.2-2.3" class="pilcrow">¶</a>
+both parties regarding the asset transfer.<a href="#section-3.2-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.2-2.4">Identification of origin and destination asset networks:
-The origin and destination networks are assumed to have been identified.<a href="#section-3.2-2.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-3.2-2.4">
+            <p id="section-3.2-2.4.1">Identification of origin and destination asset networks:
+The origin and destination networks are assumed to have been identified.<a href="#section-3.2-2.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.2-2.5">Selection of gateway: The two corresponding gateways
-at the origin and destination networks are assumed to have been identified and selected.<a href="#section-3.2-2.5" class="pilcrow">¶</a>
+          <li class="normal" id="section-3.2-2.5">
+            <p id="section-3.2-2.5.1">Selection of gateway: The two corresponding gateways
+at the origin and destination networks are assumed to have been identified and selected.<a href="#section-3.2-2.5.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1417,33 +1436,39 @@ at the origin and destination networks are assumed to have been identified and s
 leading to the invocation of the asset transfer protocol
 between two gateways:<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.3-2.1">Identification of gateway-owners:
+<li class="normal" id="section-3.3-2.1">
+            <p id="section-3.3-2.1.1">Identification of gateway-owners:
 The owners of the two corresponding gateways are assumed
-to have been identified and their ownership status verified.<a href="#section-3.3-2.1" class="pilcrow">¶</a>
+to have been identified and their ownership status verified.<a href="#section-3.3-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.3-2.2">Gateway liabilities: Gateways and gateway-operators are assumed
+          <li class="normal" id="section-3.3-2.2">
+            <p id="section-3.3-2.2.1">Gateway liabilities: Gateways and gateway-operators are assumed
 to take on legal and financial liability for their transactions,
 and gateways are assumed to operate under
 a well-defined legal framework (e.g. contractual relationship).
 Furthermore, the legal framework is assumed to be supported by
 compatible legislation in the relevant jurisdictions
-where the gateways are operating.<a href="#section-3.3-2.2" class="pilcrow">¶</a>
+where the gateways are operating.<a href="#section-3.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.3-2.3">Gateway message signatures: All messages between gateways
-are assumed to be signed and verified (e.g. X.509).<a href="#section-3.3-2.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-3.3-2.3">
+            <p id="section-3.3-2.3.1">Gateway message signatures: All messages between gateways
+are assumed to be signed and verified (e.g. X.509).<a href="#section-3.3-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.3-2.4">Transitory ownership of asset by gateway:
+          <li class="normal" id="section-3.3-2.4">
+            <p id="section-3.3-2.4.1">Transitory ownership of asset by gateway:
 Assets being transferred via SAT will technically be owned
 by gateway in transit and gateways are liable for
-them while they have ownership.<a href="#section-3.3-2.4" class="pilcrow">¶</a>
+them while they have ownership.<a href="#section-3.3-2.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.3-2.5">Network data: Gateways are assumed to have mechanisms in place to trust data
+          <li class="normal" id="section-3.3-2.5">
+            <p id="section-3.3-2.5.1">Network data: Gateways are assumed to have mechanisms in place to trust data
 returned from their local networks.
 This will depend on the technical architecture and capabilities
-of each specific network.<a href="#section-3.3-2.5" class="pilcrow">¶</a>
+of each specific network.<a href="#section-3.3-2.5.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.3-2.6">Gateways are trusted: The gateways are assumed to be trusted
-to carry-out all the stages of the protocol described in this architecture.<a href="#section-3.3-2.6" class="pilcrow">¶</a>
+          <li class="normal" id="section-3.3-2.6">
+            <p id="section-3.3-2.6.1">Gateways are trusted: The gateways are assumed to be trusted
+to carry-out all the stages of the protocol described in this architecture.<a href="#section-3.3-2.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1458,24 +1483,27 @@ to carry-out all the stages of the protocol described in this architecture.<a hr
 <p id="section-4-1">The current interoperability architecture based
 on gateways recognizes several types of transfer flows:<a href="#section-4-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4-2.1">Asset transfer: This refers to the transfer of a digital asset
+<li class="normal" id="section-4-2.1">
+          <p id="section-4-2.1.1">Asset transfer: This refers to the transfer of a digital asset
 from the origin network to a destination network,
 where a successful asset transfer causes the asset
 to be extinguished in the origin network and be created (generated)
-at the destination network.<a href="#section-4-2.1" class="pilcrow">¶</a>
+at the destination network.<a href="#section-4-2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-2.2">Data transfer: This refers to the transfer of data only under authorization,
+        <li class="normal" id="section-4-2.2">
+          <p id="section-4-2.2.1">Data sharing: This refers to the sharing of data only under authorization,
 in such a way that the data can be verified by a third party.
-The data transfer mode addresses the use-cases where
+The data sharing mode addresses the use-cases where
 the state update in one network or system depends on the existence of state information
-recorded in a different network or system.<a href="#section-4-2.2" class="pilcrow">¶</a>
+recorded in a different network or system.<a href="#section-4-2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-2.3">Asset exchange (swap): This refers to the case where
+        <li class="normal" id="section-4-2.3">
+          <p id="section-4-2.3.1">Asset exchange (swap): This refers to the case where
 two users are present in two networks,
 and they perform concurrent and atomic swaps of two assets
 in the two corresponding networks,
 without transferring the assets outside the networks.
-The gateways aid in coordinating the messages pertaining to the swap.<a href="#section-4-2.3" class="pilcrow">¶</a>
+The gateways aid in coordinating the messages pertaining to the swap.<a href="#section-4-2.3.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-4-3">The remainder of this architecture document will focus on the asset transfer flows.<a href="#section-4-3" class="pilcrow">¶</a></p>
@@ -1561,20 +1589,25 @@ asset transfer that is verifiable by an authorized third party.<a href="#section
 between two gateway  include, but not limited,
 to the following:<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.3-2.1">Atomicity: A transfer must either commit or entirely fail (failure means no change to asset state).<a href="#section-5.3-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-5.3-2.1">
+            <p id="section-5.3-2.1.1">Atomicity: A transfer must either commit or entirely fail (failure means no change to asset state).<a href="#section-5.3-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.3-2.2">Consistency: A transfer (commit or fail) always leaves the networks in a consistent state
-(i.e. the asset is located in one network only at any time).<a href="#section-5.3-2.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-5.3-2.2">
+            <p id="section-5.3-2.2.1">Consistency: A transfer (commit or fail) always leaves the networks in a consistent state
+(i.e. the asset is located in one network only at any time).<a href="#section-5.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.3-2.3">Isolation: While the transfer is occurring, the asset state cannot be modified in the origin network.<a href="#section-5.3-2.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-5.3-2.3">
+            <p id="section-5.3-2.3.1">Isolation: While the transfer is occurring, the asset state cannot be modified in the origin network.<a href="#section-5.3-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.3-2.4">Durability: Once a transfer has been committed by both gateways,
-it must remain so regardless of subsequent gateway crashes.<a href="#section-5.3-2.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-5.3-2.4">
+            <p id="section-5.3-2.4.1">Durability: Once a transfer has been committed by both gateways,
+it must remain so regardless of subsequent gateway crashes.<a href="#section-5.3-2.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.3-2.5">Verifiable by authorized third parties:
+          <li class="normal" id="section-5.3-2.5">
+            <p id="section-5.3-2.5.1">Verifiable by authorized third parties:
 The proof that the asset has been extinguished in the origin network,
 and the proof that the asset has been generated
-in the destination network must be verifiable by an authorized third party.<a href="#section-5.3-2.5" class="pilcrow">¶</a>
+in the destination network must be verifiable by an authorized third party.<a href="#section-5.3-2.5.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-5.3-3">An implementation of the asset transfer protocol should satisfy these properties,
@@ -1673,7 +1706,8 @@ he gateways are denoted as G1 and G2 respectively.<a href="#section-5.5-1" class
 <p id="section-5.5-3">The stages are summarized as follows.<a href="#section-5.5-3" class="pilcrow">¶</a></p>
 </div>
 <ul class="normal">
-<li class="normal" id="section-5.5-4.1">Stage 0: Pre-transfer Verification and Context Establishment.
+<li class="normal" id="section-5.5-4.1">
+            <p id="section-5.5-4.1.1">Stage 0: Pre-transfer Verification and Context Establishment.
 The two applications utilized by the originator and beneficiary
 is assumed to interact as part of the asset transfer.
 In this stage, the applications App1 and App2 may establish
@@ -1682,30 +1716,33 @@ that will be made
 available to their respective gateways G1 and G2.
 The legal verification of the identities of the Originator and
 Beneficiary may occur in this stages <span>[<a href="#FATF" class="cite xref">FATF</a>]</span>.
-This stage is outside the scope of the current architecture.<a href="#section-5.5-4.1" class="pilcrow">¶</a>
+This stage is outside the scope of the current architecture.<a href="#section-5.5-4.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.5-4.2">Stage 1: Transfer Initiation Claims negotiations.
+          <li class="normal" id="section-5.5-4.2">
+            <p id="section-5.5-4.2.1">Stage 1: Transfer Initiation Claims negotiations.
 In this stage gateways G1 and G2 must exchange information (claims)
 regarding the asset to be transferred, the identity information of
 the Originator and Beneficiary and other information
-regarding relevant actors (e.g. gateway owner/operator).<a href="#section-5.5-4.2" class="pilcrow">¶</a>
+regarding relevant actors (e.g. gateway owner/operator).<a href="#section-5.5-4.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-5.5-5">Additionally, the gateways must exchange information regarding
 the gateway and network characteristics that are unique
 to G1, G2, NW1 and NW2 for this particular transfer instance.<a href="#section-5.5-5" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.5-6.1">Stage 2: Lock Assertion and Receipt.  In this stage, gateway G1
+<li class="normal" id="section-5.5-6.1">
+            <p id="section-5.5-6.1.1">Stage 2: Lock Assertion and Receipt.  In this stage, gateway G1
 must provide gateway G2 with a signed assertion that
 the asset in NW1 has been immobilized and under the control on G1.
 A signed assertion is needed because NW1 may be a private or closed network,
 and therefore the state-database (ledger) in NW1 is no readable by external entities including by G2.
 Gateway G1 must therefore make this signed assertion explicitly.
-Note that the owner/operator of G1 takes on liability in signing this assertion.<a href="#section-5.5-6.1" class="pilcrow">¶</a>
+Note that the owner/operator of G1 takes on liability in signing this assertion.<a href="#section-5.5-6.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.5-6.2">Stage 3: Commitment Preparation and Finalization.
+          <li class="normal" id="section-5.5-6.2">
+            <p id="section-5.5-6.2.1">Stage 3: Commitment Preparation and Finalization.
 In this stage gateways G1 and G2 commit to the unidirectional asset transfer
-using a 3PC (3-phase commit) subprotocol.<a href="#section-5.5-6.2" class="pilcrow">¶</a>
+using a 3PC (3-phase commit) subprotocol.<a href="#section-5.5-6.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-5.5-7">These transfer stages will be further discussed below.<a href="#section-5.5-7" class="pilcrow">¶</a></p>
@@ -1770,57 +1807,64 @@ Once G2 accepts the agreed claims,
 G2 must send a signed receipt carrying the hash of the claims agreed.<a href="#section-6-5" class="pilcrow">¶</a></p>
 <p id="section-6-6">There are several steps that may occur in Stage 1:<a href="#section-6-6" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-6-7.1">Secure channel establishment between G1 and G2:
+<li class="normal" id="section-6-7.1">
+          <p id="section-6-7.1.1">Secure channel establishment between G1 and G2:
 This includes the mutual verification of the gateway device identities
 and the exchange of the relevant parameters for secure channel establishment.
 In cases where device attestation <span class="cref" id="_1">Add ref to RATS document</span> is required,
 the mutual attestation protocol must occur
-between G1 and G2 prior to proceeding to the next stage.<a href="#section-6-7.1" class="pilcrow">¶</a>
+between G1 and G2 prior to proceeding to the next stage.<a href="#section-6-7.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <ul class="normal">
-<li class="normal" id="section-6-8.1">Mutual device attestations: In cases where device attestation
+<li class="normal" id="section-6-8.1">
+          <p id="section-6-8.1.1">Mutual device attestations: In cases where device attestation
 is required, each gateway must yield attestation evidence
 to the other regarding its configuration.
 A gateway may take on the role as a attestation verifier,
-or it may rely on an external verifier to appraise the received evidence.<a href="#section-6-8.1" class="pilcrow">¶</a>
+or it may rely on an external verifier to appraise the received evidence.<a href="#section-6-8.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-6-8.2">Validation of the gateway ownership:
+        <li class="normal" id="section-6-8.2">
+          <p id="section-6-8.2.1">Validation of the gateway ownership:
 There must be a means for gateway G1 and G2 to verify their respective ownerships
 (i.e. entities owning G1 and G2 respectively).
 Examples of ownership verification mechanism include X.509 certificates,
-directories of gateways and owners, and others.<a href="#section-6-8.2" class="pilcrow">¶</a>
+directories of gateways and owners, and others.<a href="#section-6-8.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-6-8.3">Validation of owner status: In some jurisdictions,
+        <li class="normal" id="section-6-8.3">
+          <p id="section-6-8.3.1">Validation of owner status: In some jurisdictions,
 limitations may be placed for regulated asset service providers
 to transact only with other similarly regulated service providers.
 Examples of mechanisms used to validate legal status of service providers
-include directories, Extended Validation (EV) X.509 certificates, and others.<a href="#section-6-8.3" class="pilcrow">¶</a>
+include directories, Extended Validation (EV) X.509 certificates, and others.<a href="#section-6-8.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-6-8.4">Identification and validation of type/asset profile:
+        <li class="normal" id="section-6-8.4">
+          <p id="section-6-8.4.1">Identification and validation of type/asset profile:
 Both gateways must agree on the type of asset being
 transferred based on the published profile of the asset.
 Gateway G1 must communicate the asset-profile identification
 to gateway G2, who in turn must validate both the legal status of
 the asset as well as the technical capability of its network to accept the type of asset.
 The policies governing network NW2 with regards to permissible incoming assets
-must be enforced by G2.<a href="#section-6-8.4" class="pilcrow">¶</a>
+must be enforced by G2.<a href="#section-6-8.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-6-8.5">Exchange of Travel Rule information and validation:
+        <li class="normal" id="section-6-8.5">
+          <p id="section-6-8.5.1">Exchange of Travel Rule information and validation:
 In jurisdictions where the Travel Rule policies
 regarding originator and beneficiary information is enforced <span>[<a href="#FATF" class="cite xref">FATF</a>]</span>,
 the owners of gateways G1 and G2 must comply to the Travel Rule.
 Mechanisms must be used to permit gateways G1 and G2
 to make available originator/beneficiary information
 to one another in such a away that the Travel Rule information
-can be logged as part of the asset transfer history.<a href="#section-6-8.5" class="pilcrow">¶</a>
+can be logged as part of the asset transfer history.<a href="#section-6-8.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-6-8.6">Negotiation of asset transfer protocol parameters:
+        <li class="normal" id="section-6-8.6">
+          <p id="section-6-8.6.1">Negotiation of asset transfer protocol parameters:
 Gateway G1 and G2 must agree on the parameters to be employed within
 the asset transfer protocol.
 Examples include endpoints definitions for resources,
 type of commitment flows (e.g. 2PC or 3PC),
-lock-time durations, and others <span>[<a href="#SAT" class="cite xref">SAT</a>]</span>.<a href="#section-6-8.6" class="pilcrow">¶</a>
+lock-time durations, and others <span>[<a href="#SAT" class="cite xref">SAT</a>]</span>.<a href="#section-6-8.6.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-6-9">We do not need to invent new standards for several of these steps.
@@ -1845,30 +1889,34 @@ which must be explicitly acknowledged by gateway G2.<a href="#section-6-10" clas
 the asset in origin network NW1 has been immobilized and under the control of G1.<a href="#section-7-1" class="pilcrow">¶</a></p>
 <p id="section-7-2">The steps of Stage 2 are summarized in Figure 4, and broadly consists of the following:<a href="#section-7-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-7-3.1">G1 lock/escrow asset (2.1): Gateway G1 proceeds to establish
+<li class="normal" id="section-7-3.1">
+          <p id="section-7-3.1.1">G1 lock/escrow asset (2.1): Gateway G1 proceeds to establish
 a lock or escrow the asset belonging to the originator.
 This prevents other local transactions in NW1 from changing the state of the asset
 until such time the lock by G1 is finalized or released.
-A time-lock or escrow may also be employed.<a href="#section-7-3.1" class="pilcrow">¶</a>
+A time-lock or escrow may also be employed.<a href="#section-7-3.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-7-3.2">Lock Assertion (2.2): Gateway G1 sends a digitally signed assertion
+        <li class="normal" id="section-7-3.2">
+          <p id="section-7-3.2.1">Lock Assertion (2.2): Gateway G1 sends a digitally signed assertion
 regarding the locked (escrowed or immobilized) state on the asset in network NW1.
 The signature by G1 is performed using its entity public-key pair.
 This signature signifies that G1 (i.e. its owner/operator) is legally standing
 behind its statement regarding the locked/escrowed state on the asset.
-The mechanism to lock or immobilize the asset is outside the scope of SATP.<a href="#section-7-3.2" class="pilcrow">¶</a>
+The mechanism to lock or immobilize the asset is outside the scope of SATP.<a href="#section-7-3.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-7-3.3">G2 Logs and Broadcasts lock-assertion information (2.3): Gateway G2 logs a copy of the signed
+        <li class="normal" id="section-7-3.3">
+          <p id="section-7-3.3.1">G2 Logs and Broadcasts lock-assertion information (2.3): Gateway G2 logs a copy of the signed
     lock-assertion message received in Step 2.4 to its local state data DB2.
     G2 may also broadcast the fasts of the lock-assertion to all members of network NW2.
-    The mechanism to log and to broadcast is out of scope for SATP.<a href="#section-7-3.3" class="pilcrow">¶</a>
+    The mechanism to log and to broadcast is out of scope for SATP.<a href="#section-7-3.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-7-3.4">Lock-Assertion Receipt  (2.4): If gateway G2 accepts the signed assertion from G1,
+        <li class="normal" id="section-7-3.4">
+          <p id="section-7-3.4.1">Lock-Assertion Receipt  (2.4): If gateway G2 accepts the signed assertion from G1,
 then G2 responds with a digitally signed receipt message
 which includes a hash of the previous lock-assertion message.
 The signature by G2 is performed using its entity public-key pair.
 Otherwise, if G2 declines accepting the assertion then G2 can simply ignore
-the transfer and let the session time-out (i.e. transfer attempt has failed).<a href="#section-7-3.4" class="pilcrow">¶</a>
+the transfer and let the session time-out (i.e. transfer attempt has failed).<a href="#section-7-3.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="phasetwo-figure">
@@ -1915,44 +1963,53 @@ embedded within the overall SATP asset transfer protocol.<a href="#section-8-1" 
 <p id="section-8-2">Upon receiving the signed receipt message from G2 in the previous stage,
 G1 begins the commitment (see Figure 5):<a href="#section-8-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-8-3.1">Commit-prepare (3.1):
+<li class="normal" id="section-8-3.1">
+          <p id="section-8-3.1.1">Commit-prepare (3.1):
 Gateway G1 indicates to G2 to prepare for the commitment of the transfer.
-This message must include a hash of the previous messages (message 2.5 and 2.6).<a href="#section-8-3.1" class="pilcrow">¶</a>
+This message must include a hash of the previous messages (message 2.5 and 2.6).<a href="#section-8-3.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.2">Temporary asset mint (3.2): Gateway G2 creates (mints)
+        <li class="normal" id="section-8-3.2">
+          <p id="section-8-3.2.1">Temporary asset mint (3.2): Gateway G2 creates (mints)
 an equivalent asset in NW2 assigned to itself as the owner.
 This step can be reversed (i.e. asset destroyed)
 in the case of the failure in the commitment steps
-because G2 is still the owner of the asset in NW2.<a href="#section-8-3.2" class="pilcrow">¶</a>
+because G2 is still the owner of the asset in NW2.<a href="#section-8-3.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.3">Commit-ready (3.3): Gateway G2 sends a commit-ready message
+        <li class="normal" id="section-8-3.3">
+          <p id="section-8-3.3.1">Commit-ready (3.3): Gateway G2 sends a commit-ready message
 to G1 indicating that it is ready to carry-out the last steps of
 the commitment subprotocol.
 Note that that the entire asset transfer session can be aborted
-before this step without affecting the asset state in the respective networks.<a href="#section-8-3.3" class="pilcrow">¶</a>
+before this step without affecting the asset state in the respective networks.<a href="#section-8-3.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.4">Asset burn (3.4): Gateway G1 extinguishes (burns) the asset
-in network NW1 which it has locked since Step 2.3.<a href="#section-8-3.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-3.4">
+          <p id="section-8-3.4.1">Asset burn (3.4): Gateway G1 extinguishes (burns) the asset
+in network NW1 which it has locked since Step 2.3.<a href="#section-8-3.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.5">Commit-final assertion (3.5): Gateway G1 indicates to G2 that G1 has
+        <li class="normal" id="section-8-3.5">
+          <p id="section-8-3.5.1">Commit-final assertion (3.5): Gateway G1 indicates to G2 that G1 has
     performed the extinguishment of the asset in NW1.  This message
-    must be digitally signed by G1.<a href="#section-8-3.5" class="pilcrow">¶</a>
+    must be digitally signed by G1.<a href="#section-8-3.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.6">Asset-assignment (3.6): Gateway G2 assigns the minted asset
-(which it has been self-holding since Step 3.2) to the Beneficiary.<a href="#section-8-3.6" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-3.6">
+          <p id="section-8-3.6.1">Asset-assignment (3.6): Gateway G2 assigns the minted asset
+(which it has been self-holding since Step 3.2) to the Beneficiary.<a href="#section-8-3.6.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.7">ACK-final receipt (3.7): Gateway G2 sends a signed assertion
-that it has assigned the asset to the intended Beneficiary.<a href="#section-8-3.7" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-3.7">
+          <p id="section-8-3.7.1">ACK-final receipt (3.7): Gateway G2 sends a signed assertion
+that it has assigned the asset to the intended Beneficiary.<a href="#section-8-3.7.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.8">Receipt broadcast (3.8) Gateway G1 logs a copy of the
+        <li class="normal" id="section-8-3.8">
+          <p id="section-8-3.8.1">Receipt broadcast (3.8) Gateway G1 logs a copy of the
 signed receipt message to its local state data DB2.
 G1 may also broadcast the fasts of the signed receipt
 to all members of network NW1.
-The mechanism to log and to broadcast is out of scope for SATP.<a href="#section-8-3.8" class="pilcrow">¶</a>
+The mechanism to log and to broadcast is out of scope for SATP.<a href="#section-8-3.8.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-3.9">Transfer complete (3.9): Gateway G1 must explicitly close the
+        <li class="normal" id="section-8-3.9">
+          <p id="section-8-3.9.1">Transfer complete (3.9): Gateway G1 must explicitly close the
     asset transfer session with gateway G2.  This allows both sides to
-    close down the secure channel established earlier in Stage 1.<a href="#section-8-3.9" class="pilcrow">¶</a>
+    close down the secure channel established earlier in Stage 1.<a href="#section-8-3.9.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="phasethree-figure">
@@ -2076,10 +2133,12 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.<a href="#section-12-1" class="pilcrow">¶</a></p>
 </section>
 </div>
+<div id="sec-combined-references">
 <section id="section-13">
       <h2 id="name-references">
 <a href="#section-13" class="section-number selfRef">13. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
 <section id="section-13.1">
         <h3 id="name-normative-references">
 <a href="#section-13.1" class="section-number selfRef">13.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
@@ -2111,6 +2170,8 @@ and thereby meet compatibility goals.<a href="#section-12-1" class="pilcrow">¶<
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
+<div id="sec-informative-references">
 <section id="section-13.2">
         <h3 id="name-informative-references">
 <a href="#section-13.2" class="section-number selfRef">13.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
@@ -2138,7 +2199,9 @@ and thereby meet compatibility goals.<a href="#section-12-1" class="pilcrow">¶<
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
 </section>
+</div>
 <div id="authors-addresses">
 <section id="appendix-A">
       <h2 id="name-authors-addresses">
