@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-30T00:51:21.559367+00:00",
+  "timestamp": "2025-08-03T01:46:38.108744+00:00",
   "repo": "ietf-satp/draft-ietf-satp-architecture",
   "labels": [
     {
@@ -510,6 +510,34 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOKAjJUs6dz9FY",
+      "title": "Changed \"data transfer\" mode to \"data sharing\"",
+      "url": "https://github.com/ietf-satp/draft-ietf-satp-architecture/pull/16",
+      "state": "MERGED",
+      "author": "VRamakrishna",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- The term \"data transfer\" for one of the canonical interoperability modes in Section 4 is misleading, as the data is not meant to moved from one network to another but rather shared between the two. Hence, \"sharing\" is a more accurate term.\r\n  - I'd originally proposed this taxonomy based on our experience building interoperability tools under the Hyperledger (now LFDT) Weaver and Cacti frameworks, and we'd changed \"transfer\" to \"sharing\" in those projects several years ago (based on feedback) to avoid confusion. See the Cacti docs for reference(https://github.com/hyperledger-cacti/cacti, https://hyperledger-cacti.github.io/cacti/weaver/interoperability-modes/).\r\n- I've also upgraded the `upload-artifact` GitHub action to `v4` to fix the failing workflows (it was `v3` earlier, which is now deprecated).",
+      "createdAt": "2025-07-07T19:02:37Z",
+      "updatedAt": "2025-08-01T10:51:09Z",
+      "baseRepository": "ietf-satp/draft-ietf-satp-architecture",
+      "baseRefName": "main",
+      "baseRefOid": "7bd6ea80d4651ca68a0282195865bd3772f98148",
+      "headRepository": "VRamakrishna/draft-ietf-satp-architecture",
+      "headRefName": "main",
+      "headRefOid": "7d45b80d58b2768f422cb5f0956fdb4ff7756e20",
+      "closedAt": "2025-08-01T10:51:09Z",
+      "mergedAt": "2025-08-01T10:51:09Z",
+      "mergedBy": "findthomas",
+      "mergeCommit": {
+        "oid": "e39bf85b0fa508c223ea063f4033f961314b2918"
+      },
       "comments": [],
       "reviews": []
     }
