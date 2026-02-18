@@ -59,42 +59,6 @@ author:
     email: vramakr2@in.ibm.com
 
 informative:
-#    ABCH20:
-#    author:
-#    - ins: T. Ankenbrand
-#    - ins: D. Bieri
-#    - ins: R. Cortivo
-#    - ins: J. Hoehener
-#    - ins: T. Hardjono
-#    date: May 2020
-#    target: https://arxiv.org/abs/2007.11877
-#    title: Proposal for a Comprehensive Crypto Asset Taxonomy
-  # Abebe19:
-#    author:
-#    - ins: E. Abebe
-#    - ins: D. Behl
-#    - ins: C. Govindarajan
-#    - ins: Y. Hu
-#    - ins: D. Karunamoorthy
-#    - ins: P. Novotny
-#    - ins: V. Pandit
-#    - ins: V. Ramakrishna
-#    - ins: C. Vecchiola
-#    date: December 2019
-#    target: https://arxiv.org/abs/1911.01064
-#    title: Enabling Enterprise Blockchain Interoperability with Trusted Data Transfer (Middleware 2019, Industry Track)
-  # Abebe21:
-#    author:
-#    - ins: E. Abebe
-#    - ins: Y. Hu
-#    - ins: A. Irvin
-#    - ins: D. Karunamoorthy
-#    - ins: V. Pandit
-#    - ins: V. Ramakrishna
-#    - ins: J. Yu
-#    date: May 2021
-#    target: https://arxiv.org/abs/2012.07339
-#    title: Verifiable Observation of Permissioned Ledgers (ICBC2021)
 #  BCH21:
 #    author:
 #    - ins: R. Belchior
@@ -1021,5 +985,6 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
 
