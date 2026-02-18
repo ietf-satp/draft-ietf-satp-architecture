@@ -647,7 +647,7 @@ Table of Contents
       G2 must agree on the parameters to be employed within the asset
       transfer protocol.  Examples include endpoints definitions for
       resources, type of commitment flows (e.g. 2PC or 3PC), lock-time
-      durations, and others [SAT].
+      durations, and others [SATCORE].
 
    We do not need to invent new standards for several of these steps.
    Instead, we can rely on existing messaging standards like ISO 20022
@@ -927,10 +927,20 @@ Table of Contents
               Protocols, ACM Computer Communication Review, Proc SIGCOMM
               88, vol. 18, no. 4, pp. 106-114", August 1988.
 
+   [DLVIEW]   Ramakrishna, V., Pandit, V., Nishad, S., Narayanam, K.,
+              and D. Vinayagamurthy, "Views and View Addresses for
+              Blockchain/DLT Interoperability, IETF Draft", November
+              2021.
+
    [Gray81]   Gray, J., "The Transaction Concept: Virtues and
               Limitations, in VLDB Proceedings of the 7th International
               Conference, Cannes, France, September 1981, pp. 144-154",
               September 1981.
+
+   [HLP19]    Hardjono, T., Lipton, A., and A. Pentland, "Towards and
+              Interoperability Architecture for Blockchain Autonomous
+              Systems, IEEE Transactions on Engineering Management",
+              June 2019, <https://doi:10.1109/TEM.2019.2920154>.
 
    [HS19]     Hardjono, T. and N. Smith, "Decentralized Trusted
               Computing Base for Blockchain Infrastructure Security,
