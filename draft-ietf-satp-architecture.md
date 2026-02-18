@@ -59,41 +59,33 @@ author:
     email: vramakr2@in.ibm.com
 
 informative:
-#  BCH21:
-#    author:
-#    - ins: R. Belchior
-#    - ins: M. Correia
-#    - ins: T. Hardjono
-#    date: March 2021
-#    target: https://datatracker.ietf.org/doc/draft-belchior-gateway-recovery/
-#    title: DLT Gateway Crash Recovery Mechanism, IETF, draft-belchior-gateway-recovery-01.
   Clar88:
     author:
     - ins: D. Clark
     date: August 1988
     title: The Design Philosophy of the DARPA Internet Protocols, ACM Computer Communication Review, Proc SIGCOMM 88, vol. 18, no. 4, pp. 106-114
-#   DLVIEW:
-#     author:
-#     - ins: V. Ramakrishna
-#     - ins: V. Pandit
-#     - ins: S. Nishad
-#     - ins: K. Narayanam
-#     - ins: 'D. Vinayagamurthy '
-#     date: November 2021
-#     title: Views and View Addresses for Blockchain/DLT Interoperability, IETF Draft
+  DLVIEW:
+    author:
+    - ins: V. Ramakrishna
+    - ins: V. Pandit
+    - ins: S. Nishad
+    - ins: K. Narayanam
+    - ins: 'D. Vinayagamurthy '
+    date: November 2021
+    title: Views and View Addresses for Blockchain/DLT Interoperability, IETF Draft
   Gray81:
     author:
     - ins: J. Gray
     date: September 1981
     title: 'The Transaction Concept: Virtues and Limitations, in VLDB Proceedings of the 7th International Conference, Cannes, France, September 1981, pp. 144-154'
-#   HLP19:
-#     author:
-#     - ins: T. Hardjono
-#     - ins: A. Lipton
-#     - ins: A. Pentland
-#     date: June 2019
-#     target: https://doi:10.1109/TEM.2019.2920154
-#     title: Towards and Interoperability Architecture for Blockchain Autonomous Systems, IEEE Transactions on Engineering Management
+  HLP19:
+    author:
+    - ins: T. Hardjono
+    - ins: A. Lipton
+    - ins: A. Pentland
+    date: June 2019
+    target: https://doi:10.1109/TEM.2019.2920154
+    title: Towards and Interoperability Architecture for Blockchain Autonomous Systems, IEEE Transactions on Engineering Management
   HS19:
     author:
     - ins: T. Hardjono
@@ -726,7 +718,7 @@ Gateway G1 and G2 must agree on the parameters to be employed within
 the asset transfer protocol.
 Examples include endpoints definitions for resources,
 type of commitment flows (e.g. 2PC or 3PC),
-lock-time durations, and others [SAT].
+lock-time durations, and others [SATCORE].
 
 We do not need to invent new standards for several of these steps.
 Instead, we can rely on existing messaging standards like ISO 20022 [ISO20022]
@@ -972,6 +964,7 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
 
 
