@@ -896,8 +896,16 @@ Table of Contents
    [ISO20022] ISO, "Universal Financial Industry Message Scheme (ISO
               20022).", July 2023, <https://www.iso20022.org>.
 
+   [ISOBC]    ISO, "Blockchain and distributed ledger technologies-
+              Vocabulary (ISO:22739:2020)", July 2020,
+              <https://www.iso.org>.
+
    [ITIN]     ITSA, "International Token Identification Number.", July
               2023, <https://my.itsa.global/what-we-do>.
+
+   [NIST18]   Yaga, D., Mell, P., Roby, N., and K. Scarfone, "NIST
+              Blockchain Technology Overview (NISTR-8202)", October
+              2018, <https://doi.org/10.6028/NIST.IR.8202>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -908,10 +916,10 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-   [SAT]      Hargreaves, M., Hardjono, T., and R. Belchior, "IETF
-              Secure Asset Transfer Protocol (SATP)", July 2023,
-              <https://datatracker.ietf.org/doc/draft-ietf-satp-
-              core/>.>.
+   [SATCORE]  Hargreaves, M., Hardjono, T., Belchior, R., Belchior, R.,
+              and R. Belchior, "Secure Asset Transfer Protocol (SATP)
+              Core", November 2025, <https://datatracker.ietf.org/doc/
+              draft-ietf-satp-core/>.>.
 
 13.2.  Informative References
 
