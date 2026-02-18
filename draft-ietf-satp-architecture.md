@@ -97,9 +97,9 @@ informative:
     author:
     - ins: M. Richardson
     - ins: J. Yang
-    date: August 2020
+    date: November 2022
     target: https://tools.ietf.org/html/draft-richardson-t2trg-idevid-considerations-01
-    title: ' A Taxonomy of operational security of manufacturer installed keys and anchors. IETF draft-richardson-t2trg-idevid-considerations-01'
+    title: A Taxonomy of operational security considerations for manufacturer installed keys and Trust Anchors. IETF draft-richardson-t2trg-idevid-considerations-09
   SRC84:
     author:
     - ins: J. Saltzer
@@ -964,6 +964,7 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
 
 
