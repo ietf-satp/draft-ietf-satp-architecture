@@ -67,15 +67,6 @@ informative:
 #    date: March 2021
 #    target: https://datatracker.ietf.org/doc/draft-belchior-gateway-recovery/
 #    title: DLT Gateway Crash Recovery Mechanism, IETF, draft-belchior-gateway-recovery-01.
-#  BVGC20:
-#    author:
-#    - ins: R. Belchior
-#    - ins: A. Vasconcelos
-#    - ins: S. Guerreiro
-#    - ins: M. Correia
-#    date: May 2020
-#    target: https://arxiv.org/abs/2005.14282v2
-#    title: 'A Survey on Blockchain Interoperability: Past, Present, and Future Trends'
   Clar88:
     author:
     - ins: D. Clark
@@ -110,12 +101,6 @@ informative:
     date: December 2019
     target: https://doi.org/10.3389/fbloc.2019.00024
     title: Decentralized Trusted Computing Base for Blockchain Infrastructure Security, Frontiers Journal, Special Issue on Blockchain Technology, Vol. 2, No. 24
-#  Herl19:
-#    author:
-#    - ins: M. Herlihy
-#    date: February 2019
-#    target: https://doi.org/10.1145/3209623
-#    title: Blockchains From a Distributed Computing Perspective, Communications of the ACM, vol. 62, no. 2, pp. 78-85
   IDevID:
     author:
     - ins: M. Richardson
@@ -374,13 +359,13 @@ on gateways recognizes several types of transfer flows:
 from the origin network to a destination network,
 where a successful asset transfer causes the asset
 to be extinguished in the origin network and be created (generated)
-at the destination network.
+at the destination network [HLP19].
 
  * Data sharing: This refers to the sharing of data only under authorization,
 in such a way that the data can be verified by a third party.
 The data sharing mode addresses the use-cases where
 the state update in one network or system depends on the existence of state information
-recorded in a different network or system.
+recorded in a different network or system [DLVIEW].
 
  * Asset exchange (swap): This refers to the case where
 two users are present in two networks,
@@ -985,6 +970,7 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
 
 
