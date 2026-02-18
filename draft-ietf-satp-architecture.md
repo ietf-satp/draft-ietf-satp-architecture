@@ -139,7 +139,7 @@ informative:
 #     date: June 2019
 #     target: https://doi:10.1109/TEM.2019.2920154
 #     title: Towards and Interoperability Architecture for Blockchain Autonomous Systems, IEEE Transactions on Engineering Management
-  HS2019:
+  HS19:
     author:
     - ins: T. Hardjono
     - ins: N. Smith
@@ -1021,3 +1021,4 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
