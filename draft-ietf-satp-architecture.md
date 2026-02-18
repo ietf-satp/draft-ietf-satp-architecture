@@ -926,7 +926,7 @@ Gateways are of particular interest to attackers
 because they enable the transferal of digital assets to external networks,
 which may or may not be regulated.
 As such, hardening technologies and tamper-resistant crypto-processors
-(e.g. TPM, SGX) should be used for implementations of gateways [HS2019].
+(e.g. TPM, SGX) should be used for implementations of gateways [HS19].
 
 # Policy Considerations
 {: #policyconsider}
@@ -964,6 +964,7 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
 
 
