@@ -5,12 +5,12 @@
 Secure Asset Transfer Protocol                               T. Hardjono
 Internet-Draft                                                       MIT
 Intended status: Informational                             M. Hargreaves
-Expires: 2 February 2026                                   Quant Network
+Expires: 22 August 2026                                    Quant Network
                                                                 N. Smith
                                                                    Intel
                                                           V. Ramakrishna
                                                                      IBM
-                                                           1 August 2025
+                                                        18 February 2026
 
 
        Secure Asset Transfer (SAT) Interoperability Architecture
@@ -54,11 +54,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 February 2026.
+   This Internet-Draft will expire on 22 August 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -923,7 +923,7 @@ Table of Contents
               Conference, Cannes, France, September 1981, pp. 144-154",
               September 1981.
 
-   [HS2019]   Hardjono, T. and N. Smith, "Decentralized Trusted
+   [HS19]     Hardjono, T. and N. Smith, "Decentralized Trusted
               Computing Base for Blockchain Infrastructure Security,
               Frontiers Journal, Special Issue on Blockchain Technology,
               Vol. 2, No. 24", December 2019,
