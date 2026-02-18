@@ -124,12 +124,12 @@ normative:
     date: October 2018
     target: http://www.fatf- gafi.org/publications/fatfrecommendations/documents/fatf-recommendations.html
     title: International Standards on Combating Money Laundering and the Financing of Terrorism and Proliferation - FATF Revision of Recommendation 15 (Updated June 2021)
-  # ISOBC:
-#    author:
-#    - ins: ISO
-#    date: July 2020
-#    target: https://www.iso.org
-#    title: Blockchain and distributed ledger technologies- Vocabulary (ISO:22739:2020)
+  ISOBC:
+    author:
+    - ins: ISO
+    date: July 2020
+    target: https://www.iso.org
+    title: Blockchain and distributed ledger technologies- Vocabulary (ISO:22739:2020)
   ISO20022:
     author:
     - ins: ISO
@@ -142,23 +142,25 @@ normative:
     date: July 2023
     target: https://my.itsa.global/what-we-do
     title: International Token Identification Number.
-  # NIST18:
-#    author:
-#    - ins: D. Yaga
-#    - ins: P. Mell
-#    - ins: N. Roby
-#    - ins: K. Scarfone
-#    date: October 2018
-#    target: https://doi.org/10.6028/NIST.IR.8202
-#    title: NIST Blockchain Technology Overview (NISTR-8202)
-  SAT:
+  NIST18:
+    author:
+    - ins: D. Yaga
+    - ins: P. Mell
+    - ins: N. Roby
+    - ins: K. Scarfone
+    date: October 2018
+    target: https://doi.org/10.6028/NIST.IR.8202
+    title: NIST Blockchain Technology Overview (NISTR-8202)
+  SATCORE:
     author:
     - ins: M. Hargreaves
     - ins: T. Hardjono
     - ins: R. Belchior
-    date: July 2023
+    - ins: R. Belchior
+    - ins: R. Belchior
+    date: November 2025
     target: https://datatracker.ietf.org/doc/draft-ietf-satp-core/>.
-    title: IETF Secure Asset Transfer Protocol (SATP)
+    title: Secure Asset Transfer Protocol (SATP) Core
 
 --- abstract
 
@@ -970,6 +972,7 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
 
 
