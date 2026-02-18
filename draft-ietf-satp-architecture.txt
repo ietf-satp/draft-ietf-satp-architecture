@@ -851,7 +851,7 @@ Table of Contents
    the transferal of digital assets to external networks, which may or
    may not be regulated.  As such, hardening technologies and tamper-
    resistant crypto-processors (e.g. TPM, SGX) should be used for
-   implementations of gateways [HS2019].
+   implementations of gateways [HS19].
 
 11.  Policy Considerations
 
