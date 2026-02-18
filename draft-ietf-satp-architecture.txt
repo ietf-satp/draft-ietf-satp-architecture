@@ -949,9 +949,10 @@ Table of Contents
               <https://doi.org/10.3389/fbloc.2019.00024>.
 
    [IDevID]   Richardson, M. and J. Yang, "A Taxonomy of operational
-              security of manufacturer installed keys and anchors. IETF
-              draft-richardson-t2trg-idevid-considerations-01", August
-              2020, <https://tools.ietf.org/html/draft-richardson-t2trg-
+              security considerations for manufacturer installed keys
+              and Trust Anchors. IETF draft-richardson-t2trg-idevid-
+              considerations-09", November 2022,
+              <https://tools.ietf.org/html/draft-richardson-t2trg-
               idevid-considerations-01>.
 
    [SRC84]    Saltzer, J., Reed, D., and D. Clark, "End-to-End Arguments
