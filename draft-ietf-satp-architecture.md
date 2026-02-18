@@ -175,7 +175,7 @@ normative:
     date: October 2018
     target: http://www.fatf- gafi.org/publications/fatfrecommendations/documents/fatf-recommendations.html
     title: International Standards on Combating Money Laundering and the Financing of Terrorism and Proliferation - FATF Revision of Recommendation 15 (Updated June 2021)
-  # ISO:
+  # ISOBC:
 #    author:
 #    - ins: ISO
 #    date: July 2020
@@ -193,7 +193,7 @@ normative:
     date: July 2023
     target: https://my.itsa.global/what-we-do
     title: International Token Identification Number.
-  # NIST:
+  # NIST18:
 #    author:
 #    - ins: D. Yaga
 #    - ins: P. Mell
@@ -243,7 +243,7 @@ a gateway that supports the secure asset transfer protocol.
 {: #terms}
 
 Following is some terminology used in the current document.
-We borrow terminology from NIST and ISO as much as possible,
+We borrow terminology from [NIST18] and [ISOBC] as much as possible,
 introducing new terms only when needed:
 
 
@@ -1021,4 +1021,5 @@ Secure Asset Transfer architecture to be flexible and inclusive,
 and thereby meet compatibility goals.
 
 --- back
+
 
